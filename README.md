@@ -13,7 +13,7 @@ Reasons topic was selected:
   - Where potential under/over value properties are
   - Possible investment opportunities
 
-- Questions the teams hopes to answer:  
+Questions the teams hopes to answer:  
   - Where will the next hot real estate property be?
   - Where is the best real estate value?
   - How do our rankings compare to Zillow?
