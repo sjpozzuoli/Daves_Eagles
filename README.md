@@ -8,7 +8,12 @@ Group 4 Final Project
 - Select a topic
   - Real estate hotspots
 
-#### Reasons for choosing topic
+- Reasons topic was selected:
+  - Trying to find the next hottest real estate location
+  - Where potential under/over value properties are
+  - Possible investment opportunities
+
+
 
 #### Datasets
 - Inventory by month - inventory_by_month.csv
