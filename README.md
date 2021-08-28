@@ -5,6 +5,10 @@ Group 4 Final Project
 ## First Segment Rubric
 
 ### Presentation
+- Select a topic
+  - Real estate hotspots
+
+#### Reasons for choosing topic
 
 #### Datasets
 - Inventory by month - inventory_by_month.csv
