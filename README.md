@@ -5,14 +5,26 @@ Group 4 Final Project
 ## First Segment Rubric
 
 ### Presentation
-- Select a topic
+Select a topic
   - Real estate hotspots
 
-- Reasons topic was selected:
+Reasons topic was selected:
   - Trying to find the next hottest real estate location
   - Where potential under/over value properties are
   - Possible investment opportunities
 
+- Questions the teams hopes to answer:  
+  - Where will the next hot real estate property be?
+  - Where is the best real estate value?
+  - How do our rankings compare to Zillow?
+  - What makes a location valuable?
+
+### Github Repository
+- Main Branch
+  - Readme
+  - Individual Branches (Lucy, Nate, Andrew, Stephen, David)
+
+### Machine Learning Model
 
 
 #### Datasets
