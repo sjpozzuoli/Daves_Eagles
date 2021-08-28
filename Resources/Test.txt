@@ -1,0 +1,44 @@
+Effective_Tax_Rate
+-
+overall_rank int pk 
+state varchar fk - Cost_of_Living.state
+total_state_local_per float
+annual_state_local_usmedian int
+per_diff_to_US float
+annual_state_local_statemedian int
+adjusted_rank int
+
+Happiest_Cities
+-
+overall_rank int pk
+city_state varchar fk - Population_Change_By_City.city_state 
+total_score float
+emotional_physical int
+income_employment int
+community_environment int
+
+Cost_of_Living
+-
+city varchar pk fk - 200_most_populated_cities.name
+state varchar fk - 200_most_populated_cities.usps_state
+cost_living_index float
+
+200_most_populated_cities
+-
+rank int pk 
+name varchar fk - Happiest_Cities.city_state
+usps_state varchar
+pop2021 int
+pop2010 int
+change
+density float
+aland int
+
+Population_Change_By_City
+-
+rank int pk 
+city_state varchar fk >- Cost_of_Living.state
+population2018 int
+population2019 int
+change_number int
+change_per float
