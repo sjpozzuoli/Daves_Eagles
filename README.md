@@ -33,7 +33,7 @@ How does this model work? -
 - Cost of Living - advisorsmith_cost_of_living_index.csv
 - Happiest Cities - happiest_cities.xlsx
 - Mortgage Rates (Freddie Mac 15-yr fixed) -
-- Stock Market Analysis - 
+- Stock Market Indicator - 
 - Population data - 
 
 ### D) Database Ingestion - (Nat)
