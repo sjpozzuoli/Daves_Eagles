@@ -19,17 +19,17 @@ Questions the teams hopes to answer:
   - How do our rankings compare to Zillow?
   - What makes a location valuable?
 
-### B) Github Repository
+### B) Github Repository - (Stephen)
 Main Branch
   - Readme
   - Individual Branches (Lucy, Nate, Andrew, Stephen, David)
 
-### C) Machine Learning Model
+### C) Machine Learning Model - (David)
 Present a provisional machine learning model:
   - Takes in data from the provisional database
   - Output labels for input data
 
-### D) Database Ingestion
+### D) Database Ingestion - (Nat)
 Present a provisional db that stands in for the final db that accomplishes the following:
   - Sample data that mimics the expected final db structure or scheme
   - Draft machine learning model is connected to the provisional db
