@@ -16,8 +16,13 @@ Present a provisional machine learning model:
   - Takes in data from the provisional database
   - Output labels for input data
 
-Main Objective - Determine best places to invest in real estate
-Predicting - The best locations to invest in
+Main Objective/Problem/What are we trying to predict? - Determine best places to invest in real estate
+
+What model are we going to use? - Binary classification or clustering
+
+How are you training your model? - 
+
+How does this model work? - 
 
 #### Datasets/Features for model (Lucy, Andrew, Nat, David)
 - Inventory by month - inventory_by_month.csv
