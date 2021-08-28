@@ -16,7 +16,7 @@ Present a provisional machine learning model:
   - Takes in data from the provisional database
   - Output labels for input data
 
-Main Objective/Problem/What are we trying to predict? - Determine best places to invest in real estate
+Main Objective/Problem/What are we trying to predict? - Predicing housing sale prices
 
 What model are we going to use? - Binary classification or clustering
 
