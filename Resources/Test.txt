@@ -42,3 +42,33 @@ population2018 int
 population2019 int
 change_number int
 change_per float
+
+Inventory_by_Month
+-
+regionID int
+SizeRank int
+city_state varchar fk - Happiest_Cities.city_state
+Region_type varchar
+State varchar fk >- Effective_Tax_Rate.state
+Date date
+Listings_for_sale int
+
+Median_Days_Pending
+-
+regionID int
+Sizerank int
+city_state varchar fk - 200_most_populated_cities.name
+Region_type varchar
+State varchar fk >- Effective_Tax_Rate.state
+Date date fk - Inventory_by_Month.Date
+MedianDaysPending int
+
+Median_Sale_Price
+-
+regionID int
+Sizerank int
+city_state varchar fk - Population_Change_By_City.city_state
+Region_type varchar
+State varchar
+Date date fk - Median_Days_Pending.Date
+MedianSalePrice int
