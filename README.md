@@ -1,6 +1,16 @@
 # Daves_Eagles
 Group 4 Final Project
 
+### Join Methodology
+Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
+The next step is to add the final columns from Median_Days_Pending and Median_Sales_Prices as columns to the joined table - these tables have matching structures so additional manipulation is minimal. 
+To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
+
+
+To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
+
+Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
+
 ### Lucy: 
 
 With the goal of discovering and finalizing data sets, I chose the following three datasets and story lines that I thought might lead us to our goal of discovering 'The Best Place to Move (Live?) in 2022'. 
