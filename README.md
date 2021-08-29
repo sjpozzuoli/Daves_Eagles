@@ -32,7 +32,7 @@ How does this model work? -
 - Tax Rates - effective_tax_rate_2021.xlsx
 - Cost of Living - advisorsmith_cost_of_living_index.csv
 - Happiest Cities - happiest_cities.xlsx
-- Mortgage Rates (Freddie Mac 15-yr fixed) -
+- Mortgage Rates (Freddie Mac 15-yr fixed) - mortgage_long.csv
 - Stock Market Indicator - 
 - Population data - 
 
