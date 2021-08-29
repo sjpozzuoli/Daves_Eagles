@@ -11,7 +11,7 @@ Main Branch
   - Readme
   - Individual Branches (Lucy, Nate, Andrew, Steve, David)
 
-### C) Machine Learning Model - (David)
+### C) Machine Learning Model - (David, Andrew, Nat, Lucy, Steve)
 Present a provisional machine learning model:
   - Takes in data from the provisional database
   - Output labels for input data
