@@ -6,7 +6,7 @@ Group 4 Final Project
 
 ### A) Presentation
 
-### B) Github Repository - (Stephen)
+### B) Github Repository - (Steve)
 Main Branch
   - Readme
   - Individual Branches (Lucy, Nate, Andrew, Stephen, David)
