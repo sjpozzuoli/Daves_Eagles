@@ -37,8 +37,6 @@ How does this model work? -
 - Cost of Living - advisorsmith_cost_of_living_index.csv
 - Happiest Cities - happiest_cities.xlsx
 - Mortgage Rates (Freddie Mac 15-yr fixed) - mortgage_long.csv
-- Stock Market Indicator - 
-- Population data - 
 
 ### D) Database Ingestion - (Nat)
 Present a provisional db that stands in for the final db that accomplishes the following:
