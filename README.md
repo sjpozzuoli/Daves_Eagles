@@ -9,7 +9,7 @@ Group 4 Final Project
 ### B) Github Repository - (Steve)
 Main Branch
   - Readme
-  - Individual Branches (Lucy, Nate, Andrew, Stephen, David)
+  - Individual Branches (Lucy, Nate, Andrew, Steve, David)
 
 ### C) Machine Learning Model - (David)
 Present a provisional machine learning model:
