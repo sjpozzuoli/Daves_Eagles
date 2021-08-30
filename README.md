@@ -51,6 +51,8 @@ Present a provisional db that stands in for the final db that accomplishes the f
   - Sample data that mimics the expected final db structure or scheme
   - Draft machine learning model is connected to the provisional db
 
+![ERD_v1](https://user-images.githubusercontent.com/81929616/131272834-a278bad3-973c-4ead-9ce7-e6030b3d397d.png)
+
 
 ### Join Methodology
 #### Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
