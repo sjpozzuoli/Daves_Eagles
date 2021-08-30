@@ -46,6 +46,8 @@ How does this model work? -
 - Happiest Cities - happiest_cities.xlsx
 - Mortgage Rates (Freddie Mac 15-yr fixed) - mortgage_long.csv
 
+![Proof_of_Concept_Screenshot](https://user-images.githubusercontent.com/81929616/131272996-e258b6d8-f039-42c7-93a7-017b11bbf6c1.PNG)
+
 ### D) Database Ingestion - (Nat)
 Present a provisional db that stands in for the final db that accomplishes the following:
   - Sample data that mimics the expected final db structure or scheme
