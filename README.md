@@ -34,11 +34,10 @@ Population change for cities between 2018-2019, which could help narrow cities t
 #### To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
 
 
-To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
+#### To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
 
-Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
-=======
-Dave_Supple
+#### Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
+
 ## David
 
 ## First Segment Rubric
