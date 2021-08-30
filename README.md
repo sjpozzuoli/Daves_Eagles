@@ -2,7 +2,9 @@ Lucy_Green
 # Daves_Eagles
 Group 4 Final Project
 
-Presentation
+## First Segment Rubric
+
+### A) Presentation
 
 1. Selected topic
 - We chose to examine historical real estate and city data to predict the next city that will see a real estate "boom"
@@ -12,18 +14,6 @@ Presentation
 - We have begun to source data from multiple places like Zillow and the newly reprted Census data to build a picture of the historical information about these cities. From there we will attempt to determine which factors are most important when implementing the unsupervised machine learning aspect of the project.
 4. Questions we hope to answer with the data
 - We hope to answer the question of which city will see an increase in real estate prices due to an influx of new residents. We will also attempt to determine which cities would be ideal for investing in real estate prior to this rush.
-
-### Join Methodology
-#### Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
-#### The next step is to add the final columns from Median_Days_Pending and Median_Sales_Prices as columns to the joined table - these tables have matching structures so additional manipulation is minimal. 
-#### To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
-
-
-#### To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
-
-#### Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
-
-## First Segment Rubric
 
 ### B) Github Repository - (Steve)
 Main Branch
@@ -61,4 +51,17 @@ How does this model work? -
 Present a provisional db that stands in for the final db that accomplishes the following:
   - Sample data that mimics the expected final db structure or scheme
   - Draft machine learning model is connected to the provisional db
+
+
+### Join Methodology
+#### Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
+#### The next step is to add the final columns from Median_Days_Pending and Median_Sales_Prices as columns to the joined table - these tables have matching structures so additional manipulation is minimal. 
+#### To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
+
+
+#### To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
+
+#### Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
+
+
 
