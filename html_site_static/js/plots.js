@@ -1,7 +1,7 @@
 function init() {
     var selector = d3.select("#selDataset");
   
-    d3.json("https://raw.githubusercontent.com/Luegreen/plotly-javascript-module12/master/docs/samples.json").then((data) => {
+    d3.json("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/lucy_green/SQL%20Data%20Join/realtor_mortgage.json").then((data) => {
       console.log(data);
       var sampleNames = data.names;
       sampleNames.forEach((sample) => {
@@ -14,7 +14,7 @@ function init() {
   })}
   
   function buildMetadata(sample) {
-    d3.json("https://raw.githubusercontent.com/Luegreen/plotly-javascript-module12/master/docs/samples.json").then((data) => {
+    d3.json("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/lucy_green/SQL%20Data%20Join/realtor_mortgage.json").then((data) => {
       var metadata = data.metadata;
       var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
       var result = resultArray[0];
