@@ -878,8 +878,8 @@ Break down incredience of &apos;hotness&apos; etc to tell a clear story.
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='1950' minheight='1950' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='37' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97916' id='36' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+            <zone h='100000' id='39' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='38' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
                 <zone forceUpdate='true' h='29036' id='12' type-v2='text' w='50512' x='586' y='1042'>
                   <formatted-text>
                     <run fontname='Tableau Bold' fontsize='48'>Next hottest city</run>
@@ -1027,8 +1027,8 @@ Break down incredience of &apos;hotness&apos; etc to tell a clear story.
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='12' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='84000' id='11' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='13' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
