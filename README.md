@@ -1,8 +1,38 @@
 Lucy_Green
 # Daves_Eagles
 Group 4 Final Project
-Dave_Supple
-## David
+
+## SECOND SEGMENT RUBRIC
+
+### This Week: “Build The Pieces”
+
+*Train your model and build out the database you’ll use for your final presentation.*
+
+By the end of this segment, you’ll will have: 
+- Connected your machine learning model into the project
+- Integrated and Optimized the database into the project
+- Have all necessary GitHub branches merged
+- Iterated on your dashboard
+
+### Choose Your Machine Learning Model
+
+#### *You have the data, what do you hope to get out of it?*
+- Step 1: Analyze the input data.
+- Step 2: Analyze the output data.
+- Step 3: Choose your algorithm - Clustering Algos
+- Step 4: Analyze the results and review accuracy
+
+Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+
+Simplifying the process of buying a home by pinpointing the most important features
+
+
+01 - Presentation outlines the project (15 points)
+02 - All code in main GitHub repo branch is production ready
+03 - Code is submitted for the machine learning model (30 points)
+04 - Presentation of a fully integrated database (30 points)
+05 - A blueprint for the dashboard is created (15 points)
+
 
 ## First Segment Rubric
 
