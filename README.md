@@ -13,11 +13,11 @@ We've used visualizations throught out this process to
   d) as a tool for discussion, to make sure that we're understanding one another and speaking the same language. 
 
 
-While working in Tableau to quickly see the data and understand the potential of our analysis, we're working on a parallel track in Javascript as that would be our aspirational delevery tool. 
+While working in Tableau to quickly see the data and understand the potential of our analysis, we're working on a parallel track in Javascript as that would be our aspirational delivery tool. 
 
 The screen shots below show the evolution of our data visualization work... from sketch to code. 
 
-Below is the fifth Tableau iteration showing the choice to show a limited number of specific cities to analyse. These are from the US News and World report list of '150 Best Places to Live'. In our finally analysis, we will chose our own top cities with regards to the results of our Machine Learning model. 
+Below is the fifth Tableau iteration showing the choice to show a limited number of specific cities to analyse. We have crossreferenced our own data sets to the city choices from the US News and World report list of '150 Best Places to Live'. In our finally analysis, we will chose our own top cities rather than the US News and World report's list with regards to the results of our Machine Learning model. 
 <img width="1393" alt="Screen Shot 2021-09-06 at 3 54 51 PM" src="https://user-images.githubusercontent.com/14239715/132949550-79c28f92-8057-454f-9551-9e7179c16909.png">
 
 Below is the integration of the Machine Learning model build by the team. We are now integrating the learnings of the model with the prior viz sketchs to hone in on a discrete and specific story. 
