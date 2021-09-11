@@ -1,6 +1,37 @@
 # Daves_Eagles
 Group 4 Final Project
 
+## Second Segment Rubric
+Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). I'm going to go ahead and add a Viz section and please edit it however you like to make it correspond with the Rubric setup that I believe Dave is going to build to match what Steve did for the first segement. 
+
+### Visualization Iteration
+
+We've used visualizations throught out this process to 
+  a) understand our data and lay the ground work of our study. 
+  b) to get the data sets in motion; test them and make sure that we have all of the infomation we'll need, in a format that is useful 
+  c) to start to understand the scope of our inquiry. While there are endless parameters that would be fun to study, understanding the what is in scope for a cohesive project and what is out of scope has been crutial to deliver a comprehensive analysis and 
+  d) as a tool for discussion, to make sure that we're understanding one another and speaking the same language. 
+
+
+While working in Tableau to quickly see the data and understand the potential of our analysis, we're working on a parallel track in Javascript as that would be our aspirational delevery tool. 
+
+The screen shots below show the evolution of our data visualization work... from sketch to code. 
+
+Below is the fifth Tableau iteration showing the choice to show a limited number of specific cities to analyse. These are from the US News and World report list of '150 Best Places to Live'. In our finally analysis, we will chose our own top cities with regards to the results of our Machine Learning model. 
+<img width="1393" alt="Screen Shot 2021-09-06 at 3 54 51 PM" src="https://user-images.githubusercontent.com/14239715/132949550-79c28f92-8057-454f-9551-9e7179c16909.png">
+
+Below is the integration of the Machine Learning model build by the team. We are now integrating the learnings of the model with the prior viz sketchs to hone in on a discrete and specific story. 
+<img width="1412" alt="Screen Shot 2021-09-10 at 7 09 47 PM" src="https://user-images.githubusercontent.com/14239715/132949555-5e477900-7ece-47e5-bf4e-7d2a1aef6895.png">
+
+Finally, the code in progress of a potential Javascript/HTML site for potential final delivery.
+<img width="1686" alt="Screen Shot 2021-09-10 at 8 14 53 PM" src="https://user-images.githubusercontent.com/14239715/132949573-676407f2-2da1-4840-b807-5fd747c9e60f.png">
+
+
+
+
+
+
+
 ## First Segment Rubric
 
 ### A) Presentation
