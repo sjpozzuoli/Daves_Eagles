@@ -2,7 +2,7 @@
 Group 4 Final Project
 
 ## Second Segment Rubric
-Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). I'm going to go ahead and add a Viz section and please edit it however you like to make it correspond with the Rubric setup that I believe Dave is going to build to match what Steve did for the first segement. 
+Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). Please edit this however you like to make it correspond with the Rubric setup. I believe Dave is going to build the setup to match what Steve did for the first segement. 
 
 ### Visualization Iteration
 
