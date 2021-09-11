@@ -27,11 +27,11 @@ By the end of this segment, you’ll will have:
 - Simplifying the process of buying a home by pinpointing the most important features
 
 ### Second Segment Grading Criteria:
-01 - Presentation outlines the project (15 points)
-02 - All code in main GitHub repo branch is production ready
-03 - Code is submitted for the machine learning model (30 points)
-04 - Presentation of a fully integrated database (30 points)
-05 - A blueprint for the dashboard is created (15 points)
+- 01 - Presentation outlines the project (15 points)
+- 02 - All code in main GitHub repo branch is production ready
+- 03 - Code is submitted for the machine learning model (30 points)
+- 04 - Presentation of a fully integrated database (30 points)
+- 05 - A blueprint for the dashboard is created (15 points)
 
 
 ## First Segment Rubric
