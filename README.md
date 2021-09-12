@@ -14,7 +14,7 @@ Our team had also discovered several other datasets that were of interest in our
 
 #### Resources:
 - [dataset](https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data.csv)
-- unsupervised_analysis_group_project.ipynb
+- [unsupervised_analysis_group_project.ipynb](https://github.com/sjpozzuoli/Daves_Eagles/blob/main/unsupervised_analysis_group_project.ipynb)
 
 #### Software:
 - Python 3.8.5
