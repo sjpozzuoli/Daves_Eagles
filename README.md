@@ -23,15 +23,23 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![analyze_input_a](https://user-images.githubusercontent.com/36451701/133001328-1171b0f9-aa1c-4e58-9070-ab112c3881cd.png)
 
+#### Step 2: Analyze the output data.
+
 ![analyze_input_b](https://user-images.githubusercontent.com/36451701/133001333-68e5d8a8-047b-487a-89b9-06e503973d00.png)
 
 ![analyze_input_c](https://user-images.githubusercontent.com/36451701/133001336-4e841548-7c46-472e-abc1-55c04d01c5e3.png)
 
 ![analyze_input_d](https://user-images.githubusercontent.com/36451701/133001337-72167618-7372-4647-b7e0-aa936d7da1dd.png)
 
+#### Step 3: Choose your algorithm - Clustering KMeans
 
-#### Step 2: Analyze the output data.
-#### Step 3: Choose your algorithm - Clustering Algos
+![kmeans_a](https://user-images.githubusercontent.com/36451701/133001547-e4882ca5-9787-452c-9e95-e84e01967ad1.png)
+
+![elbow](https://user-images.githubusercontent.com/36451701/133001549-d7f83f2d-9e5a-423c-aa31-72870c5bf369.png)
+
+![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
+
+
 #### Step 4: Analyze the results and review accuracy
 
 Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
