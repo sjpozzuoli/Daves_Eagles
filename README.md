@@ -1,36 +1,102 @@
-Lucy_Green
 # Daves_Eagles
 Group 4 Final Project
-Natasha_Nelson
 
-## Natasha Log: 8/27
-Working off the assumption we're going to be using some of the Zillow datasets as the basis of our analysis, I wanted to find a few sources that could help us select which cities to focus our analysis on. 
+## Second Segment Rubric
+Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). Please edit this however you like to make it correspond with the Rubric setup. I believe Dave is going to build the setup to match what Steve did for the first segement. 
 
-1. Source: https://worldpopulationreview.com/us-cities
-Shows the most populated cities in the US for 2021 - since our goal is to explore 'up and coming' cities, we can use this to potentially drop cities that are too large in the Zillow data. 
+### Database Iteration
+For the base of our project we worked with a dataset from Realtor.com (https://www.kaggle.com/maedemaftouni/real-estate-market-trends?select=RDC_Inventory_Hotness_Metrics_County_History.csv). We cleaned this dataset using Python Pandas to check for duplicates, those indicated to be outliers, and removing columns that are out of scope for the analysis. See Dataset_Exploration_v1.ipynb for additional details. Secondly, we cleaned the Mortgage Rates dataset using a similar process in Python Panda (see Mortgage_Cleaning.ipynb for additional details). Both datasets were manually loaded into pgAdmin for merging with SQL and merged with a left join on the Realtor.com dataset (see SQL_Join_ML_Dataset.txt to review the SQL queries).  This merged dataset serves as the basis for much of the visualization below. 
 
-2.Source: https://www.census.gov/data/tables/time-series/econ/mhs/month-of-shipment.html
-Sale price by month in case we want to dive further into 'when to move' after doing the machine learning component. 
+Our team had also discovered several other datasets that were of interest in our analysis, including information on the cost of living, state and local tax rates and taxes on the median households for both the U.S. and State Households, and happiness index rankings. These datasets were also cleaned via Pandas and loaded in to the SQL Database using a string encoder and tosql Pandas commands (see SQL_String_Encoder.ipynb) and merged the datasets in pgAdmin (see SQL Joins Supplementary.txt)
 
-3. Source: US Census Bureau (looking for link!)
-Population change for cities between 2018-2019, which could help narrow cities that are already on a growth trajectory.  
+### Connecting Machine Learning Model 
+*You have the data, what do you hope to get out of it?*
 
-### Join Methodology
-Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
-The next step is to add the final columns from Median_Days_Pending and Median_Sales_Prices as columns to the joined table - these tables have matching structures so additional manipulation is minimal. 
-To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
+#### Resources:
+- dataset
+
+#### Software:
+- Python 3.8.5
+- Google Colab
+
+#### Step 1: Analyze the input data.
+
+![analyze_input_a](https://user-images.githubusercontent.com/36451701/133001328-1171b0f9-aa1c-4e58-9070-ab112c3881cd.png)
+
+#### Step 2: Analyze the output data.
+
+![analyze_input_b](https://user-images.githubusercontent.com/36451701/133001333-68e5d8a8-047b-487a-89b9-06e503973d00.png)
+
+![analyze_input_c](https://user-images.githubusercontent.com/36451701/133001336-4e841548-7c46-472e-abc1-55c04d01c5e3.png)
+
+![analyze_input_d](https://user-images.githubusercontent.com/36451701/133001337-72167618-7372-4647-b7e0-aa936d7da1dd.png)
+
+#### Step 3: Choose your algorithm - Clustering KMeans
+
+![kmeans_a](https://user-images.githubusercontent.com/36451701/133001547-e4882ca5-9787-452c-9e95-e84e01967ad1.png)
+
+![elbow](https://user-images.githubusercontent.com/36451701/133001549-d7f83f2d-9e5a-423c-aa31-72870c5bf369.png)
+
+![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
+
+#### Step 4: Analyze the results and review accuracy
+
+![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
+
+#### Analysis
+- Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+- Simplifying the process of buying a home by pinpointing the most important features.
+- What are the characteristics of the different clusters/groups created by the machine learning model?
+
+![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
+
+![boxplot](https://user-images.githubusercontent.com/36451701/133001735-e5f8223d-7753-43c0-b82f-fecddf9a0410.png)
+
+![demand](https://user-images.githubusercontent.com/36451701/133001761-bc1c9d89-7b52-4775-a658-8869609b081e.png)
+
+![supply](https://user-images.githubusercontent.com/36451701/133001780-5da55a74-f875-4f01-bb6f-7927d82ff7de.png)
+
+![hotness](https://user-images.githubusercontent.com/36451701/133001799-e6db938b-288e-4570-ac44-fc0f8b2a804c.png)
 
 
-To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
+### Visualization Iteration
 
-Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
-=======
-Dave_Supple
-## David
+We've used visualizations throught out this process to 
+  a) understand our data and lay the ground work of our study. 
+  b) to get the data sets in motion; test them and make sure that we have all of the infomation we'll need, in a format that is useful 
+  c) to start to understand the scope of our inquiry. While there are endless parameters that would be fun to study, understanding the what is in scope for a cohesive project and what is out of scope has been crutial to deliver a comprehensive analysis and 
+  d) as a tool for discussion, to make sure that we're understanding one another and speaking the same language. 
 
+
+While working in Tableau to quickly see the data and understand the potential of our analysis, we're working on a parallel track in Javascript as that would be our aspirational delivery tool. 
+
+The screen shots below show the evolution of our data visualization work... from sketch to code. 
+
+Below is the fifth Tableau iteration showing the choice to show a limited number of specific cities to analyse. We have crossreferenced our own data sets to the city choices from the US News and World report list of '150 Best Places to Live'. In our finally analysis, we will chose our own top cities rather than the US News and World report's list with regards to the results of our Machine Learning model. 
+<img width="1393" alt="Screen Shot 2021-09-06 at 3 54 51 PM" src="https://user-images.githubusercontent.com/14239715/132949550-79c28f92-8057-454f-9551-9e7179c16909.png">
+
+Below is the integration of the Machine Learning model build by the team. We are now integrating the learnings of the model with the prior viz sketchs to hone in on a discrete and specific story. 
+<img width="1412" alt="Screen Shot 2021-09-10 at 7 09 47 PM" src="https://user-images.githubusercontent.com/14239715/132949555-5e477900-7ece-47e5-bf4e-7d2a1aef6895.png">
+
+Finally, the code in progress of a potential Javascript/HTML site for potential final delivery.
+<img width="1686" alt="Screen Shot 2021-09-10 at 8 14 53 PM" src="https://user-images.githubusercontent.com/14239715/132949573-676407f2-2da1-4840-b807-5fd747c9e60f.png">
+
+
+___________________________________________________________________________________________________________________________________________________________________________________
 ## First Segment Rubric
 
 ### A) Presentation
+
+1. Selected topic
+- We chose to examine historical real estate and city data to predict the next city that will see a real estate "boom"
+2. Reason why the topic was selected
+- The topic was selected because we thought it was a relevant piece of information in the current age, with many people moving out of big cities and to the "suburbs". 
+3. Description of their source of data
+- We have begun to source data from multiple places like Zillow and the newly reprted Census data to build a picture of the historical information about these cities. From there we will attempt to determine which factors are most important when implementing the unsupervised machine learning aspect of the project.
+4. Questions we hope to answer with the data
+- We hope to answer the question of which city will see an increase in real estate prices due to an influx of new residents. We will also attempt to determine which cities would be ideal for investing in real estate prior to this rush.
+
+#### In order to communicate for this project, we have used class time, office hours, a slack channel with all members and video chats outside of class time in order to coordinate roles and let others know when data was being uploaded to branches. 
 
 ### B) Github Repository - (Steve)
 Main Branch
@@ -54,7 +120,7 @@ How are you training your model? -
 
 How does this model work? - 
 
-#### Datasets/Features for model (Lucy, Andrew, Nat, David)
+#### Datasets/Features for model (Lucy, Andrew, Nat, David, Steve)
 - Inventory by month - inventory_by_month.csv
 - Median sale price by city - median_sales_prices.csv
 - Median days to pending by city - median_days_pending.csv
@@ -64,42 +130,25 @@ How does this model work? -
 - Happiest Cities - happiest_cities.xlsx
 - Mortgage Rates (Freddie Mac 15-yr fixed) - mortgage_long.csv
 
+![Proof_of_Concept_Screenshot](https://user-images.githubusercontent.com/81929616/131272996-e258b6d8-f039-42c7-93a7-017b11bbf6c1.PNG)
+
 ### D) Database Ingestion - (Nat)
 Present a provisional db that stands in for the final db that accomplishes the following:
   - Sample data that mimics the expected final db structure or scheme
   - Draft machine learning model is connected to the provisional db
 
-
-=======
-
-With the goal of discovering and finalizing data sets, I chose the following three datasets and story lines that I thought might lead us to our goal of discovering 'The Best Place to Move (Live?) in 2022'. 
-
-Added three data sets with three visual explanations (a screenshot of a graph from the rental dataset below). Four commits… I threw the rental and single family dataset into Tableau and got the following graphs. 
-
-The following graph from the Metro_ZORI_AllHomesPlusMultifamily_SSA.csv dataset shows the highest rental prices per city and also the most variation of rental prices (the thicker the line, the more variation in rental prices). Analysis: the largest change in rental price = the more desirable the city currently. (but are the cities with more stable prices more attractive because there is less current competition?)
-
-<img width="1422" alt="Metro_ZORI_AllHomesPlusMultifamily_SSA" src="https://user-images.githubusercontent.com/14239715/130970780-743408cd-8aa9-4c0f-a9bf-258871067635.png">
+![ERD_v1](https://user-images.githubusercontent.com/81929616/131272834-a278bad3-973c-4ead-9ce7-e6030b3d397d.png)
 
 
-
-I made the following graph out of the data set mentioned below: my thinking is that ‘the best city to move to’ would not be any of the top (10?) that the average family unit is jumping sky high. San Jose is the highest but this graph will show any lines we hover over when looked at in Tableau after transposing the data in Excel so that the dates were rows and the cities were columns. 
-
-<img width="1218" alt="Metro_zhvi_uc_sfr_tier_0 33_0 67_sm_sa_month" src="https://user-images.githubusercontent.com/14239715/130970644-7d2eb5d2-d56e-4943-85b5-9de161d20e3e.png">
-
-
-Finally, I thought it would be interesting to see how long each house is on the market before it sells, per state over time. This would potentially be an indicator of the LEAST desireable places to a purchase home currently. I also transposed this data in Excel to get the time line.  
-<img width="1192" alt="Metro_mean_doz_pending_uc_sfcondo_sm_month" src="https://user-images.githubusercontent.com/14239715/130982358-a2011336-03f1-4ca0-b7af-87b926eede8a.png">
+### Join Methodology
+#### Starting with the Zillow Inventory by Month table as the 'base', drop the first two columns - "RegionID" and "SizeRank" as these don't add useful indexing information and could potentially confuse the model.
+#### The next step is to add the final columns from Median_Days_Pending and Median_Sales_Prices as columns to the joined table - these tables have matching structures so additional manipulation is minimal. 
+#### To add the effective tax data, quickly translated the "State" column of Effective_Tax_2021 to the State acronyms. Using a quick Index/Match function, we can map the tax rates onto the cities. This could also be accomplished grouping on larger datasets. 
 
 
-All thee graphs are on Tableau and ready for further investigation. 
+#### To add the Happiest_Cities data, we can map the RegionName column to the City column using Index/Match.
+
+#### Similar methodology was used to add the population data, spread across the 200 Most Populated Cities and Population Change datasets. 
 
 
-
-
-
-
-=======
-main
-
-main
 main
