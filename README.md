@@ -43,11 +43,19 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
 
+#### Analysis
 - Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
 - Simplifying the process of buying a home by pinpointing the most important features
 
 ![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
 
+![boxplot](https://user-images.githubusercontent.com/36451701/133001735-e5f8223d-7753-43c0-b82f-fecddf9a0410.png)
+
+![demand](https://user-images.githubusercontent.com/36451701/133001761-bc1c9d89-7b52-4775-a658-8869609b081e.png)
+
+![supply](https://user-images.githubusercontent.com/36451701/133001780-5da55a74-f875-4f01-bb6f-7927d82ff7de.png)
+
+![hotness](https://user-images.githubusercontent.com/36451701/133001799-e6db938b-288e-4570-ac44-fc0f8b2a804c.png)
 
 
 ### Visualization Iteration
@@ -73,11 +81,7 @@ Finally, the code in progress of a potential Javascript/HTML site for potential 
 <img width="1686" alt="Screen Shot 2021-09-10 at 8 14 53 PM" src="https://user-images.githubusercontent.com/14239715/132949573-676407f2-2da1-4840-b807-5fd747c9e60f.png">
 
 
-
-
-
-
-
+___________________________________________________________________________________________________________________________________________________________________________________
 ## First Segment Rubric
 
 ### A) Presentation
