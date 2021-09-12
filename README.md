@@ -1,3 +1,4 @@
+![clusters](https://user-images.githubusercontent.com/36451701/133001586-8ae64857-7719-4869-ba77-26cf13a0c07e.png)
 # Daves_Eagles
 Group 4 Final Project
 
@@ -38,6 +39,8 @@ Our team had also discovered several other datasets that were of interest in our
 ![elbow](https://user-images.githubusercontent.com/36451701/133001549-d7f83f2d-9e5a-423c-aa31-72870c5bf369.png)
 
 ![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
+
+![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
 
 
 #### Step 4: Analyze the results and review accuracy
