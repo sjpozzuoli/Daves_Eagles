@@ -4,6 +4,8 @@ Group 4 Final Project
 ## Second Segment Rubric
 Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). Please edit this however you like to make it correspond with the Rubric setup. I believe Dave is going to build the setup to match what Steve did for the first segement. 
 
+### Connecting Machine Learning Model 
+
 ### Database Iteration
 For the base of our project we worked with a dataset from Realtor.com (https://www.kaggle.com/maedemaftouni/real-estate-market-trends?select=RDC_Inventory_Hotness_Metrics_County_History.csv). We cleaned this dataset using Python Pandas to check for duplicates, those indicated to be outliers, and removing columns that are out of scope for the analysis. See Dataset_Exploration_v1.ipynb for additional details. Secondly, we cleaned the Mortgage Rates dataset using a similar process in Python Panda (see Mortgage_Cleaning.ipynb for additional details). Both datasets were manually loaded into pgAdmin for merging with SQL and merged with a left join on the Realtor.com dataset (see SQL_Join_ML_Dataset.txt to review the SQL queries).  This merged dataset serves as the basis for much of the visualization below. 
 
