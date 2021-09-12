@@ -4,12 +4,23 @@ Group 4 Final Project
 ## Second Segment Rubric
 Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). Please edit this however you like to make it correspond with the Rubric setup. I believe Dave is going to build the setup to match what Steve did for the first segement. 
 
-### Connecting Machine Learning Model 
-
 ### Database Iteration
 For the base of our project we worked with a dataset from Realtor.com (https://www.kaggle.com/maedemaftouni/real-estate-market-trends?select=RDC_Inventory_Hotness_Metrics_County_History.csv). We cleaned this dataset using Python Pandas to check for duplicates, those indicated to be outliers, and removing columns that are out of scope for the analysis. See Dataset_Exploration_v1.ipynb for additional details. Secondly, we cleaned the Mortgage Rates dataset using a similar process in Python Panda (see Mortgage_Cleaning.ipynb for additional details). Both datasets were manually loaded into pgAdmin for merging with SQL and merged with a left join on the Realtor.com dataset (see SQL_Join_ML_Dataset.txt to review the SQL queries).  This merged dataset serves as the basis for much of the visualization below. 
 
 Our team had also discovered several other datasets that were of interest in our analysis, including information on the cost of living, state and local tax rates and taxes on the median households for both the U.S. and State Households, and happiness index rankings. These datasets were also cleaned via Pandas and loaded in to the SQL Database using a string encoder and tosql Pandas commands (see SQL_String_Encoder.ipynb) and merged the datasets in pgAdmin (see SQL Joins Supplementary.txt)
+
+### Connecting Machine Learning Model 
+*You have the data, what do you hope to get out of it?*
+
+#### Step 1: Analyze the input data.
+
+#### Step 2: Analyze the output data.
+#### Step 3: Choose your algorithm - Clustering Algos
+#### Step 4: Analyze the results and review accuracy
+
+Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+
+Simplifying the process of buying a home by pinpointing the most important features
 
 
 ### Visualization Iteration
