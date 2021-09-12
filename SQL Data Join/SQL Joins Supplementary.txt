@@ -1,0 +1,35 @@
+-- Add the tax rates to the yoy/mortgage rate table for 2021 dates
+SELECT ym.*, 
+	tr.tax_rank,
+	tr."Effective_Total_Tax_Med_US_Household",
+	tr."Annual_Total_Tax_Med_US_Household",
+	tr."Per_Diff_State_US_Avg",
+	tr."Annual_Total_Tax_State_Household",
+	tr."Adjusted_Overall_Rank"
+INTO "2021_Subset"
+FROM yoy_mortgage as ym
+LEFT JOIN tax_rates as tr
+ON ym.state_abb = tr.abbrev
+WHERE (date BETWEEN '2021-01-01' AND '2021-08-01');
+
+SELECT * FROM "2021_Subset";
+
+-- Join the data from 2021 dates to the COL_Index table
+SELECT col."Cost of Living Index", sub.*
+INTO "2021_COL"
+FROM "2021_Subset" AS sub
+LEFT JOIN col_index AS col
+ON col.city_state = sub.city_state;
+
+SELECT COUNT ("Cost of Living Index") FROM "2021_COL" -- 6488
+SELECT COUNT (*) FROM "2021_COL" -- 8647
+
+-- Join the 2021 Data to the Happiest Cities Data
+SELECT col.*, hp.overall_rank, hp.total_score, hp.emotional_score, hp.income_score, hp.community_score
+INTO "2021_happy"
+FROM "2021_COL" AS col
+LEFT JOIN happiest_cities AS hp
+ON col.city_state = hp.city_state;
+
+SELECT COUNT ("overall_rank") FROM "2021_happy" -- 3248
+SELECT COUNT (*) FROM "2021_happy" -- 8647
