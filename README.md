@@ -19,6 +19,7 @@ Our team had also discovered several other datasets that were of interest in our
 #### Software:
 - Python 3.8.5
 - Google Colab
+- RStudio: 3.6.2
 
 #### Step 1: Analyze the input data.
 
