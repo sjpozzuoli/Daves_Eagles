@@ -13,7 +13,7 @@ Our team had also discovered several other datasets that were of interest in our
 *You have the data, what do you hope to get out of it?*
 
 #### Resources:
-- dataset
+- [dataset](https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data.csv)
 - unsupervised_analysis_group_project.ipynb
 
 #### Software:
