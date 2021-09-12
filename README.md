@@ -45,7 +45,8 @@ Our team had also discovered several other datasets that were of interest in our
 
 #### Analysis
 - Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
-- Simplifying the process of buying a home by pinpointing the most important features
+- Simplifying the process of buying a home by pinpointing the most important features.
+- What are the characteristics of the different clusters/groups created by the machine learning model?
 
 ![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
 
