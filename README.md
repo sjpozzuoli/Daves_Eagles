@@ -12,7 +12,23 @@ Our team had also discovered several other datasets that were of interest in our
 ### Connecting Machine Learning Model 
 *You have the data, what do you hope to get out of it?*
 
+#### Resources:
+- dataset
+
+#### Software:
+- Python 3.8.5
+- Google Colab
+
 #### Step 1: Analyze the input data.
+
+![analyze_input_a](https://user-images.githubusercontent.com/36451701/133001328-1171b0f9-aa1c-4e58-9070-ab112c3881cd.png)
+
+![analyze_input_b](https://user-images.githubusercontent.com/36451701/133001333-68e5d8a8-047b-487a-89b9-06e503973d00.png)
+
+![analyze_input_c](https://user-images.githubusercontent.com/36451701/133001336-4e841548-7c46-472e-abc1-55c04d01c5e3.png)
+
+![analyze_input_d](https://user-images.githubusercontent.com/36451701/133001337-72167618-7372-4647-b7e0-aa936d7da1dd.png)
+
 
 #### Step 2: Analyze the output data.
 #### Step 3: Choose your algorithm - Clustering Algos
