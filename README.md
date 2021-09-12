@@ -1,4 +1,3 @@
-![clusters](https://user-images.githubusercontent.com/36451701/133001586-8ae64857-7719-4869-ba77-26cf13a0c07e.png)
 # Daves_Eagles
 Group 4 Final Project
 
@@ -40,14 +39,15 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
 
-![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
-
-
 #### Step 4: Analyze the results and review accuracy
 
-Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
 
-Simplifying the process of buying a home by pinpointing the most important features
+- Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+- Simplifying the process of buying a home by pinpointing the most important features
+
+![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
+
 
 
 ### Visualization Iteration
