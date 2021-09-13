@@ -50,6 +50,8 @@ Our team had also discovered several other datasets that were of interest in our
 - Simplifying the process of buying a home by pinpointing the most important features.
 - What are the characteristics of the different clusters/groups created by the machine learning model?
 
+![pivot](https://user-images.githubusercontent.com/36451701/133010657-3b50020c-7cd8-4149-88b4-e108614f0bae.png)
+
 ![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
 
 ![boxplot](https://user-images.githubusercontent.com/36451701/133001735-e5f8223d-7753-43c0-b82f-fecddf9a0410.png)
