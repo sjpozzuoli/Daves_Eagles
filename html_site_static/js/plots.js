@@ -1,7 +1,7 @@
 function init() {
     var selector = d3.select("#selDataset");
-    d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/lucy_green/SQL%20Data%20Join/realtor_mortgage.csv").then(function(data) {
-      console.log("data_pre", data);
+    d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/Natasha_Nelson/SQL%20Data%20Join/realtor_mortgage.csv").then(function(data) {
+      //console.log("data_pre", data);
       data.forEach(function(d){
           //create number values from strings
           d.demand_score = +d.demand_score;
@@ -19,25 +19,20 @@ function init() {
       
         console.log(data[0]);
         var cityNames = d.city_name;
-            console.log("cityNames", cityNames);
+           // console.log("cityNames", cityNames);
         var state = d.state_abb;
-            console.log("state", state);
+           // console.log("state", state);
         var city_state = cityNames + ", " + state;
-            console.log(city_state);
+           // console.log(city_state);
+
+        //pulls user selection of city from splash page
+        selector
+            .append("optionChanged")
+            .text(city_state)
+            .property("value", city_state)
     
-      
-//i should not call both data. foreach functions, it's spinning out hte code 
-//into forever loops. 
-      data.forEach((d) => {
-  
 
-            selector
-                .append("optionChanged")
-                .text(city_state)
-                .property("value", city_state)
-        })
-
-      })
+      });
 
     }); 
    
