@@ -42,7 +42,7 @@ Our team had also discovered several other datasets that were of interest in our
 
 #### Step 4: Analyze the results and review accuracy
 
-![clusters](https://user-images.githubusercontent.com/36451701/133001591-406726cd-a864-4608-8a5c-ed145d2f37e9.png)
+![clusters_b](https://user-images.githubusercontent.com/36451701/133324106-80c484bf-6f8d-4843-9334-be2eab9b12c2.png)
 
 #### Analysis
 - Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
