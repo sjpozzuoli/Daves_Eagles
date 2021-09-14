@@ -58,6 +58,8 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
 
+![heatmap_b](https://user-images.githubusercontent.com/36451701/133326825-59d89f18-36a2-4a65-b2df-3afb018b817d.png)
+
 ![boxplot](https://user-images.githubusercontent.com/36451701/133001735-e5f8223d-7753-43c0-b82f-fecddf9a0410.png)
 
 ![demand](https://user-images.githubusercontent.com/36451701/133001761-bc1c9d89-7b52-4775-a658-8869609b081e.png)
