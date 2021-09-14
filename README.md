@@ -38,6 +38,8 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![elbow](https://user-images.githubusercontent.com/36451701/133001549-d7f83f2d-9e5a-423c-aa31-72870c5bf369.png)
 
+![elbow_b](https://user-images.githubusercontent.com/36451701/133333021-03fce2d6-60d4-465b-89e4-e360671ac4ba.png)
+
 ![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
 
 #### Step 4: Analyze the results and review accuracy
