@@ -44,6 +44,8 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![clusters_b](https://user-images.githubusercontent.com/36451701/133324106-80c484bf-6f8d-4843-9334-be2eab9b12c2.png)
 
+![clusters_c](https://user-images.githubusercontent.com/36451701/133325865-c7461d0d-5f40-4cd2-9dd9-ad6900d7cb7f.png)
+
 #### Analysis
 - Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
 - Simplifying the process of buying a home by pinpointing the most important features.
