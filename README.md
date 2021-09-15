@@ -40,7 +40,7 @@ Our team had also discovered several other datasets that were of interest in our
 
 ![elbow_b](https://user-images.githubusercontent.com/36451701/133333021-03fce2d6-60d4-465b-89e4-e360671ac4ba.png)
 
-![elbow_c](https://user-images.githubusercontent.com/36451701/133355020-b957b16a-1891-4d20-99fe-b35ac4a72ffb.png)
+![elbow_d](https://user-images.githubusercontent.com/36451701/133479101-fc033efe-7601-4b85-84e6-607b79c56a17.png)
 
 ![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
 
