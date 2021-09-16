@@ -10,6 +10,15 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel='stylesheet' type='text/css'>
+    
+    
+    
+    
+    //the goal is size of circle = hotness_rank and color of circle = class
+    
+    
+    
+    
     <style>
     body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; background:black;}
     svg { width:100%; height: 100% }
@@ -48,7 +57,8 @@
     var xColumn = "longitude";
     var yColumn = "latitude";
     var rColumn = "class";
-    var classPerPixel = .0001;
+    //I've been changing classPerPixel around to see if the data is showing but in the wrong scale
+    var rankPerPixel = .0001;
     
 var width = 960,
   height = 580;
@@ -114,10 +124,10 @@ svg.selectAll(".country")
 
       rScale.domain([0, d3.max(data, function (d){ return d[rColumn]; })]);
 
-      // Compute the size of the biggest circle as a function of peoplePerPixel.
+      // Compute the size of the biggest circle as a function of rankPerPixel.
       var classMax = rScale.domain()[1];
       var rMin = 0;
-      var rMax = Math.sqrt(peopleMax / (classPerPixel * Math.PI));
+      var rMax = Math.sqrt(peopleMax / (rankPerPixel * Math.PI));
       rScale.range([rMin, rMax]);
       
       var circles = svg.selectAll("circle").data(data);
@@ -146,43 +156,43 @@ svg.selectAll(".country")
 
 d3.select(self.frameElement).style("height", height + "px");
 
-  
-  </script>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Sweet City Finder</h1>
-        <p>Use the interactive charts below to find the Next Hottest City</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Select a City:</h5>
-          <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
+  //this piece is a remnant from earlier code to select a city and induce changes in the charts
+  // </script>
+  // <div class="container">
+  //   <div class="row">
+  //     <div class="col-md-12 jumbotron text-center">
+  //       <h1>Sweet City Finder</h1>
+  //       <p>Use the interactive charts below to find the Next Hottest City</p>
+  //     </div>
+  //   </div>
+  //   <div class="row">
+  //     <div class="col-md-2">
+  //       <div class="well">
+  //         <h5>Select a City:</h5>
+  //         <!-- <select id="selDataset"></select> -->
+  //         <select id="selDataset" onchange="optionChanged(this.value)"></select>
+  //       </div>
+  //       <div class="panel panel-primary">
+  //         <div class="panel-heading">
+  //           <h3 class="panel-title">Demographic Info</h3>
+  //         </div>
+  //         <div id="sample-metadata" class="panel-body"></div>
            
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div id="bar"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
-    </div>
-  </div>
+  //       </div>
+  //     </div>
+  //     <div class="col-md-5">
+  //       <div id="bar"></div>
+  //     </div>
+  //     <div class="col-md-5">
+  //       <div id="gauge"></div>
+  //     </div>
+  //   </div>
+  //   <div class="row">
+  //     <div class="col-md-12">
+  //       <div id="bubble"></div>
+  //     </div>
+  //   </div>
+  // </div>
 
   
 
