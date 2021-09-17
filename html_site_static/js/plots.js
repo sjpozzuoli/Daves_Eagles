@@ -4,7 +4,10 @@ function init() {
     var selector = d3.select("#selDataset");
     d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data_clusters_latlong_ready.csv").then(function(data) {
       //console.log("data_pre", data);
+      
+      
       data.forEach(function(d){
+        
           //create number values from strings
           d.demand_score = +d.demand_score;
           d.hotness_rank = +d.hotness_rank;
@@ -22,10 +25,10 @@ function init() {
         //console.log(d);
         //console.log(d.city);
         var city_state = d.city + ", " + d.state;
-           console.log(city_state);
-
-        return data;
-        console.log(data);
+           //console.log(city_state);
+       
+        
+        
 
         //pulls user selection of city from splash page has never worked
         //selector
@@ -38,9 +41,9 @@ function init() {
 
     }); 
    
-  }
+  };
 
-  
+  init();
 
 
 
@@ -51,4 +54,3 @@ function init() {
  //   buildCharts(newSample);
  // }
   
-  init();
