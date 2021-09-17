@@ -163,12 +163,13 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main
   var city_state = d.city + ", " + d.state;
       //console.log(city_state);
     });
-console.log(data);
+console.log(data, "data");
 svg.selectAll("circle")
 	.data(data)
 	.enter()
 	.append("circle")
 	.attr("cx", function(d) {
+    console.log(d.longitude, "d.longitude");
 		return projection(d.longitude, d.latitude);
 	})
 	.attr("cy", function(d) {
