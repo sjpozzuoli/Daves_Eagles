@@ -1,6 +1,22 @@
 # Daves_Eagles
 Group 4 Final Project
 
+## Third Segment Rubric
+### This Week: "Plug It In"
+
+*Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
+
+#### Machine Learning Model
+Team members submit the working code for their machine learning model, as well as the following:
+
+##### Description of data preprocessing:
+##### Description of feature engineering and the feature selection, including their decision-making process:
+##### Description of how data was split into training and testing sets:
+##### Explanation of model choice, including limitations and benefits:
+##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+##### Description of how they have trained the model thus far, and any additional training that will take place:
+##### Description of current accuracy score:
+
 ## Second Segment Rubric
 
 ### Database Iteration
