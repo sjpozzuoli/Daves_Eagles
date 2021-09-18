@@ -6,7 +6,9 @@ Group 4 Final Project
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
-<u>#### Machine Learning Model</u>
+<p>This is a <u>parragraph</u>.</p>
+
+#### Machine Learning Model
 Team members submit the working code for their machine learning model, as well as the following:
 
 ##### Description of data preprocessing:
