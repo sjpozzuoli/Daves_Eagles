@@ -1,6 +1,9 @@
 # Daves_Eagles
 Group 4 Final Project
 ## Andrew
+HTML version of the map
+<img width="1250" alt="map" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/8658275fc86d45587897bbf8e04eea5981120978/Resource_Main/map.png>
 I decided do add some data with indirect or minor impact on choice of location to live. 
 Tax rates differ between satates and may play decisive role in the assesment. The following dataset consist effective tax rate for all states.
 <img width="1250" alt="effective_tax_rate" src="https://github.com/andgerashchenko/test/blob/2e4b15ba41eb6ab3e32153af3c8d5a5e62ba213d/resources/effective_tax_rate.png">
