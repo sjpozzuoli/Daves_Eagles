@@ -33,7 +33,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_test_train](https://user-images.githubusercontent.com/36451701/133942704-4b105e2f-6b1f-4e71-afbf-ed0e709fc33e.png)
 
-![unsupervised_split](https://user-images.githubusercontent.com/36451701/133912167-620caaef-a839-4f03-a6d3-c27c883eb175.png)
+![unsupervised_thedataset](https://user-images.githubusercontent.com/36451701/133945283-1dfe6dc9-7ae6-48a9-858b-581e49dd9308.png)
 
 ![unsupervised_optimal_clusters](https://user-images.githubusercontent.com/36451701/133945162-c299c195-24e4-4faf-b064-54de8d361a07.png)
 
