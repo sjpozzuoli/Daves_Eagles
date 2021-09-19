@@ -25,6 +25,11 @@ Team members submit the working code for their machine learning model, as well a
 ![identify_outliers](https://user-images.githubusercontent.com/36451701/133911808-e0f488e2-9217-479b-add1-cf088731a63a.png)
 
 ##### Description of how data was split into training and testing sets:
+
+![unsupervised_split](https://user-images.githubusercontent.com/36451701/133912167-620caaef-a839-4f03-a6d3-c27c883eb175.png)
+
+![unsupervised_elbow](https://user-images.githubusercontent.com/36451701/133912237-0b6c0a80-32b3-4da2-aa12-d579e70d2d5d.png)
+
 ##### Explanation of model choice, including limitations and benefits:
 ##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
 ##### Description of how they have trained the model thus far, and any additional training that will take place:
