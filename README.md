@@ -15,7 +15,7 @@ Team members submit the working code for their machine learning model, as well a
 #### Connect Database to Machine Learning Model:
 ![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
 
-![pgadmin_realtor](https://user-images.githubusercontent.com/36451701/133911548-3b90c7a1-368d-44ea-bc6d-e1e475ffdc60.png)
+![unsupervised_db_connection](https://user-images.githubusercontent.com/36451701/133943107-44397901-6da6-4813-bc32-ac9502a9d26d.png)
 
 ![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
 
