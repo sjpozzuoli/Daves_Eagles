@@ -6,31 +6,33 @@ Group 4 Final Project
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
-#### Machine Learning Model 1 - Unsupervised Clustering with KMeans
+### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
 
-##### Description of data preprocessing:
-##### Connect Database to Machine Learning Model:
-##### Description of feature engineering and the feature selection, including their decision-making process:
-##### Description of how data was split into training and testing sets:
-##### Explanation of model choice, including limitations and benefits:
-##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
-##### Description of how they have trained the model thus far, and any additional training that will take place:
-##### Description of current accuracy score:
+#### Description of data preprocessing:
+#### Connect Database to Machine Learning Model:
+#### Description of feature engineering and the feature selection, including their decision-making process:
+#### Description of how data was split into training and testing sets:
+#### Explanation of model choice, including limitations and benefits:
+#### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+#### Description of how they have trained the model thus far, and any additional training that will take place:
+#### Description of current accuracy score:
 
 
-#### Machine Learning Model 2 - Supervised Simple Linear Regression
+### Machine Learning Model 2 - Supervised Simple Linear Regression
 Team members submit the working code for their machine learning model, as well as the following:
 
-##### Description of data preprocessing:
-##### Connect Database to Machine Learning Model:
+#### Description of data preprocessing:
+#### Connect Database to Machine Learning Model:
 - Data is already loaded from PostgresSQL 
-##### Description of feature engineering and the feature selection, including their decision-making process:
-##### Description of how data was split into training and testing sets:
-##### Explanation of model choice, including limitations and benefits:
-##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
-##### Description of how they have trained the model thus far, and any additional training that will take place:
-##### Description of current accuracy score:
+#### Description of feature engineering and the feature selection, including their decision-making process:
+#### Description of how data was split into training and testing sets:
+#### Explanation of model choice, including limitations and benefits:
+#### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+#### Description of how they have trained the model thus far, and any additional training that will take place:
+#### Description of current accuracy score:
+
+
 ## Second Segment Rubric
 
 ### Database Iteration
