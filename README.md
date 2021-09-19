@@ -4,6 +4,16 @@ Group 4 Final Project
 ## Third Segment Rubric
 ### This Week: "Plug It In"
 
+
+### Elements of Github:
+Cohesive, structured outline of the project
+(this may include images, but should be easy
+to follow and digest) ✓ Link to Google Slides draft presentation
+Note: The descriptions and explanations
+required in all other project deliverables
+should also be in your README.md as part
+of your outline, unless otherwise noted. 
+
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
