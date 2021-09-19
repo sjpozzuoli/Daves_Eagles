@@ -41,7 +41,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_training_kmeans](https://user-images.githubusercontent.com/36451701/133946080-0dfb965c-60e6-4d8b-b743-d502ad1b6945.png)
 
-![unsupervised_cluster_matplotlib](https://user-images.githubusercontent.com/36451701/133946294-460ae7ae-2b89-434d-8d7f-7a326dbc036a.png)
+![unsupervised_cluster_matplotlib](https://user-images.githubusercontent.com/36451701/133946352-da0a72f2-f4e0-4891-a38f-cc67e413c892.png)
 
 ![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
 
