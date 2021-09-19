@@ -28,7 +28,7 @@ Team members submit the working code for their machine learning model, as well a
 
 #### Description of how data was split into training and testing sets:
 
-![unsupervised_test_train](https://user-images.githubusercontent.com/36451701/133942632-b1757059-cb05-4291-a82c-4c98993b21ad.png)
+![unsupervised_test_train](https://user-images.githubusercontent.com/36451701/133942704-4b105e2f-6b1f-4e71-afbf-ed0e709fc33e.png)
 
 ![unsupervised_split](https://user-images.githubusercontent.com/36451701/133912167-620caaef-a839-4f03-a6d3-c27c883eb175.png)
 
