@@ -16,7 +16,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![pgadmin_realtor](https://user-images.githubusercontent.com/36451701/133911548-3b90c7a1-368d-44ea-bc6d-e1e475ffdc60.png)
 
-![connect_db_1](https://user-images.githubusercontent.com/36451701/133911550-00c70699-9c9d-4655-ab97-bf588f1c9fdf.png)
+![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
 
 ##### Description of feature engineering and the feature selection, including their decision-making process:
 ##### Description of how data was split into training and testing sets:
