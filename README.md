@@ -47,8 +47,6 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
 
-![unsupervised_add_class](https://user-images.githubusercontent.com/36451701/133912360-972ad71e-e373-4c4e-a320-4d27553e2d52.png)
-
 #### Description of how they have trained the model thus far, and any additional training that will take place:
 
 #### Explanation of model choice, including limitations and benefits:
