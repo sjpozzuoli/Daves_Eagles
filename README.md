@@ -9,28 +9,8 @@ Group 4 Final Project
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
 
-#### Description of data preprocessing:
-#### Connect Database to Machine Learning Model:
-#### Description of feature engineering and the feature selection, including their decision-making process:
-#### Description of how data was split into training and testing sets:
-#### Explanation of model choice, including limitations and benefits:
-#### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
-#### Description of how they have trained the model thus far, and any additional training that will take place:
-#### Description of current accuracy score:
-
-
 ### Machine Learning Model 2 - Supervised Simple Linear Regression to Predict Hotness Rank
 Team members submit the working code for their machine learning model, as well as the following:
-
-#### Description of data preprocessing:
-#### Connect Database to Machine Learning Model:
-- Data is already loaded from PostgresSQL 
-#### Description of feature engineering and the feature selection, including their decision-making process:
-#### Description of how data was split into training and testing sets:
-#### Explanation of model choice, including limitations and benefits:
-#### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
-#### Description of how they have trained the model thus far, and any additional training that will take place:
-#### Description of current accuracy score:
 
 
 ## Second Segment Rubric
