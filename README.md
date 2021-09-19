@@ -19,6 +19,11 @@ Team members submit the working code for their machine learning model, as well a
 ![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
 
 ##### Description of feature engineering and the feature selection, including their decision-making process:
+
+![feature_selection](https://user-images.githubusercontent.com/36451701/133911789-b1d49421-bf6a-4041-aadb-798e91f90bfe.png)
+
+![identify_outliers](https://user-images.githubusercontent.com/36451701/133911808-e0f488e2-9217-479b-add1-cf088731a63a.png)
+
 ##### Description of how data was split into training and testing sets:
 ##### Explanation of model choice, including limitations and benefits:
 ##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
