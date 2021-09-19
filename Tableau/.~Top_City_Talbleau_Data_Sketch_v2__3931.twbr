@@ -7724,7 +7724,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
             <zone h='1111' id='3' type-v2='title' w='99000' x='500' y='889' />
             <zone fixed-size='87' h='9667' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='99000' x='500' y='2000' />
             <zone h='87444' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='99000' x='500' y='11667'>
-              <flipboard active-id='4' nav-type='caption' show-nav-arrows='false'>
+              <flipboard active-id='2' nav-type='caption' show-nav-arrows='false'>
                 <story-points>
                   <story-point caption='Details of the Machine Learning Model' captured-sheet='ML Model Details' id='3' />
                   <story-point caption='Next Hottest City! ' captured-sheet='Dashboard 1 from Static' id='2'>
@@ -7881,13 +7881,13 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
       <simple-id uuid='{6F5378AF-53F5-4955-B034-1249660CAE20}' />
     </dashboard>
   </dashboards>
-  <windows source-height='51'>
-    <window class='dashboard' name='SPLASH PAGE' tab-color='#17927d'>
+  <windows pres-mode='true' source-height='51'>
+    <window class='dashboard' maximized='true' name='SPLASH PAGE' tab-color='#17927d'>
       <viewpoints />
-      <active id='-1' />
+      <active id='5' />
       <simple-id uuid='{1B963B9D-11D4-455A-B32B-79A2EE743FE9}' />
     </window>
-    <window class='dashboard' maximized='true' name='Dashboard 1 from Static' tab-color='#6e597f'>
+    <window class='dashboard' name='Dashboard 1 from Static' tab-color='#6e597f'>
       <viewpoints>
         <viewpoint name='Map of Hotness vs Our Hotness'>
           <zoom type='entire-view' />
