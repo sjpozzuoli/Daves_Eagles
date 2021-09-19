@@ -5,16 +5,15 @@ Group 4 Final Project
 ### This Week: "Plug It In"
 
 
-### Elements of Github:
-Cohesive, structured outline of the project
-(this may include images, but should be easy
-to follow and digest) ✓ Link to Google Slides draft presentation
-Note: The descriptions and explanations
-required in all other project deliverables
-should also be in your README.md as part
-of your outline, unless otherwise noted. 
+### Viz code and porgression
+The Presentation itself will be in Tableau (not Google Slides) using the Story feature. 
+The intro will lead us into the discussion of the Machine Learning model of the project. 
+We will then go to the interactive tool itself. 
+The first encarnation of the tool is this interactive Tableau representation:
+This enables users to scrole through Realtor.com's Hotness ranking and discover into which of our machine learning groupings each city falls. 
+<img width="1404" alt="Screen Shot 2021-09-19 at 7 13 07 PM" src="https://user-images.githubusercontent.com/14239715/133946878-98e10252-efd0-402b-a85f-d83af49b7bf9.png">
+Secondly, we'll have the HTML/Javascript version of the tool. 
 
-*Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
