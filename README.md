@@ -32,11 +32,15 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_elbow](https://user-images.githubusercontent.com/36451701/133912237-0b6c0a80-32b3-4da2-aa12-d579e70d2d5d.png)
 
+![unsupervised_training2](https://user-images.githubusercontent.com/36451701/133941295-5c3f77cc-09b9-47de-95b2-b8c743e49f38.png)
+
 ![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
 
 ![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
 
 ![unsupervised_add_class](https://user-images.githubusercontent.com/36451701/133912360-972ad71e-e373-4c4e-a320-4d27553e2d52.png)
+
+##### Description of how they have trained the model thus far, and any additional training that will take place:
 
 ##### Explanation of model choice, including limitations and benefits:
 
