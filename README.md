@@ -38,7 +38,9 @@ Team members submit the working code for their machine learning model, as well a
 ![unsupervised_add_class](https://user-images.githubusercontent.com/36451701/133912360-972ad71e-e373-4c4e-a320-4d27553e2d52.png)
 
 ##### Explanation of model choice, including limitations and benefits:
-##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+
+![unsupervised_explanations](https://user-images.githubusercontent.com/36451701/133940803-db86d055-0090-4f57-bf00-46699dfd3507.png)
+
 ##### Description of how they have trained the model thus far, and any additional training that will take place:
 ##### Description of current accuracy score:
 
