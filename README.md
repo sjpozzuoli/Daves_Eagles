@@ -18,6 +18,7 @@ Team members submit the working code for their machine learning model, as well a
 ##### Description of how they have trained the model thus far, and any additional training that will take place:
 ##### Description of current accuracy score:
 
+
 #### Machine Learning Model 2 - Supervised Simple Linear Regression
 Team members submit the working code for their machine learning model, as well as the following:
 
