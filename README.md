@@ -39,6 +39,8 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_elbow_method](https://user-images.githubusercontent.com/36451701/133945420-5668dd19-1b34-413f-8619-9a803a44db9c.png)
 
+![unsupervised_training_kmeans](https://user-images.githubusercontent.com/36451701/133946080-0dfb965c-60e6-4d8b-b743-d502ad1b6945.png)
+
 ![unsupervised_training2](https://user-images.githubusercontent.com/36451701/133941295-5c3f77cc-09b9-47de-95b2-b8c743e49f38.png)
 
 ![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
