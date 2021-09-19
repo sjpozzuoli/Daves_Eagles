@@ -2,6 +2,46 @@ Lucy_Green
 # Daves_Eagles
 Group 4 Final Project
 
+## Third Segment Rubric
+### This Week: "Plug It In"
+
+*Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
+
+#### Machine Learning Model 1 - Unsupervised Clustering with KMeans
+Team members submit the working code for their machine learning model, as well as the following:
+
+##### Description of data preprocessing:
+
+##### Connect Database to Machine Learning Model:
+![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
+
+![pgadmin_realtor](https://user-images.githubusercontent.com/36451701/133911548-3b90c7a1-368d-44ea-bc6d-e1e475ffdc60.png)
+
+![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
+
+##### Description of feature engineering and the feature selection, including their decision-making process:
+
+![feature_selection](https://user-images.githubusercontent.com/36451701/133911789-b1d49421-bf6a-4041-aadb-798e91f90bfe.png)
+
+![identify_outliers](https://user-images.githubusercontent.com/36451701/133911808-e0f488e2-9217-479b-add1-cf088731a63a.png)
+
+##### Description of how data was split into training and testing sets:
+
+![unsupervised_split](https://user-images.githubusercontent.com/36451701/133912167-620caaef-a839-4f03-a6d3-c27c883eb175.png)
+
+![unsupervised_elbow](https://user-images.githubusercontent.com/36451701/133912237-0b6c0a80-32b3-4da2-aa12-d579e70d2d5d.png)
+
+![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
+
+![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
+
+![unsupervised_add_class](https://user-images.githubusercontent.com/36451701/133912360-972ad71e-e373-4c4e-a320-4d27553e2d52.png)
+
+##### Explanation of model choice, including limitations and benefits:
+##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+##### Description of how they have trained the model thus far, and any additional training that will take place:
+##### Description of current accuracy score:
+
 ## SECOND SEGMENT RUBRIC
 
 ### This Week: “Build The Pieces”
