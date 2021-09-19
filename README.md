@@ -6,12 +6,13 @@ Group 4 Final Project
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
-<p>This is a <u>parragraph</u>.</p>
-
 #### Machine Learning Model
 Team members submit the working code for their machine learning model, as well as the following:
 
 ##### Description of data preprocessing:
+
+![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911427-f3823d36-9de3-4dfa-8f0b-b839abad2ef7.png)
+
 ##### Description of feature engineering and the feature selection, including their decision-making process:
 ##### Description of how data was split into training and testing sets:
 ##### Explanation of model choice, including limitations and benefits:
