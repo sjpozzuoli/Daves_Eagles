@@ -6,7 +6,7 @@ Group 4 Final Project
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
 
-#### Machine Learning Model
+#### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
 
 ##### Description of data preprocessing:
@@ -32,6 +32,8 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
 
+![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
+
 ![unsupervised_add_class](https://user-images.githubusercontent.com/36451701/133912360-972ad71e-e373-4c4e-a320-4d27553e2d52.png)
 
 ##### Explanation of model choice, including limitations and benefits:
@@ -39,6 +41,20 @@ Team members submit the working code for their machine learning model, as well a
 ##### Description of how they have trained the model thus far, and any additional training that will take place:
 ##### Description of current accuracy score:
 
+#### Machine Learning Model 2 - Supervised Simple Linear Regression
+##### Description of data preprocessing:
+
+![supervised_data_preprocessing](https://user-images.githubusercontent.com/36451701/133913137-7328565a-ec53-49ab-856c-8f1745e69772.png)
+
+##### Connect Database to Machine Learning Model:
+- Data is already loaded from PostgresSQL 
+
+##### Description of feature engineering and the feature selection, including their decision-making process:
+##### Description of how data was split into training and testing sets:
+##### Explanation of model choice, including limitations and benefits:
+##### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+##### Description of how they have trained the model thus far, and any additional training that will take place:
+##### Description of current accuracy score:
 ## Second Segment Rubric
 
 ### Database Iteration
