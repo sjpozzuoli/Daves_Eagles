@@ -20,7 +20,7 @@ Team members submit the working code for their machine learning model, as well a
 ![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
 
 #### Description of feature engineering and the feature selection, including their decision-making process:
-![unsupervised_feature_selection](https://user-images.githubusercontent.com/36451701/133943729-e815cc09-e120-45d6-af23-144f6481a889.png)
+![unsupervised_correlations_matrix](https://user-images.githubusercontent.com/36451701/133945037-8679dd9d-98f0-46fa-b200-06a15ae75318.png)
 
 ![unsupervised_outliers](https://user-images.githubusercontent.com/36451701/133944288-f4c4ec9b-7f0f-434a-8746-9a008718c229.png)
 
