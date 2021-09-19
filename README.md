@@ -11,7 +11,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ##### Description of data preprocessing:
 
-#### Connect Database to Machine Learning Model:
+##### Connect Database to Machine Learning Model:
 ![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
 
 ![pgadmin_realtor](https://user-images.githubusercontent.com/36451701/133911548-3b90c7a1-368d-44ea-bc6d-e1e475ffdc60.png)
