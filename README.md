@@ -11,7 +11,13 @@ Team members submit the working code for their machine learning model, as well a
 
 ##### Description of data preprocessing:
 
+#### Connect Database to Machine Learning Model:
+
 ![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911427-f3823d36-9de3-4dfa-8f0b-b839abad2ef7.png)
+
+![pgadmin_realtor](https://user-images.githubusercontent.com/36451701/133911500-788ba587-4394-49ec-80f6-b15c8d02fb24.png)
+
+![connect_db_1](https://user-images.githubusercontent.com/36451701/133911530-51a26d24-9d47-45ee-b48c-eeb148046d0c.png)
 
 ##### Description of feature engineering and the feature selection, including their decision-making process:
 ##### Description of how data was split into training and testing sets:
