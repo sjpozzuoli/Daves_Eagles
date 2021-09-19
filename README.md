@@ -42,6 +42,9 @@ Team members submit the working code for their machine learning model, as well a
 ![unsupervised_explanations](https://user-images.githubusercontent.com/36451701/133940803-db86d055-0090-4f57-bf00-46699dfd3507.png)
 
 ##### Description of how they have trained the model thus far, and any additional training that will take place:
+
+![unsupervised_training2](https://user-images.githubusercontent.com/36451701/133941295-5c3f77cc-09b9-47de-95b2-b8c743e49f38.png)
+
 ##### Description of current accuracy score:
 
 ## SECOND SEGMENT RUBRIC
