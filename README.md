@@ -19,7 +19,7 @@ Team members submit the working code for their machine learning model, as well a
 #### Description of current accuracy score:
 
 
-### Machine Learning Model 2 - Supervised Simple Linear Regression
+### Machine Learning Model 2 - Supervised Simple Linear Regression to Predict Hotness Rank
 Team members submit the working code for their machine learning model, as well as the following:
 
 #### Description of data preprocessing:
