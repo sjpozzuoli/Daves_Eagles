@@ -43,7 +43,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_cluster_matplotlib](https://user-images.githubusercontent.com/36451701/133946352-da0a72f2-f4e0-4891-a38f-cc67e413c892.png)
 
-![unsupervised_cluster](https://user-images.githubusercontent.com/36451701/133912332-c99982dc-850f-477e-8b59-5f55f65dc01d.png)
+![unsupervised_city_clusters](https://user-images.githubusercontent.com/36451701/133946854-2ff11da0-fd42-4c43-ad1b-c9b6c857eaa7.png)
 
 ![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
 
