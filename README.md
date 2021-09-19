@@ -5,7 +5,7 @@ Group 4 Final Project
 ### This Week: "Plug It In"
 
 
-### Viz code and porgression
+### Viz, presentation and code progression
 The Presentation itself will be in Tableau (not Google Slides) using the Story feature. 
 The intro will lead us into the discussion of the Machine Learning model of the project. 
 We will then go to the interactive tool itself. 
