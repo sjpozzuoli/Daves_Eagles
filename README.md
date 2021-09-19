@@ -49,8 +49,7 @@ Team members submit the working code for their machine learning model, as well a
 
 #### Explanation of model choice, including limitations and benefits:
 
-![unsupervised_explanations](https://user-images.githubusercontent.com/36451701/133940803-db86d055-0090-4f57-bf00-46699dfd3507.png)
-
+![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133944426-3a5976f5-092c-4e91-9092-de4832dee0fb.png)
 
 
 ##### Description of current accuracy score:
