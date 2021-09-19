@@ -25,6 +25,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![identify_outliers](https://user-images.githubusercontent.com/36451701/133911808-e0f488e2-9217-479b-add1-cf088731a63a.png)
 
+
 ##### Description of how data was split into training and testing sets:
 
 ![unsupervised_split](https://user-images.githubusercontent.com/36451701/133912167-620caaef-a839-4f03-a6d3-c27c883eb175.png)
@@ -41,9 +42,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_explanations](https://user-images.githubusercontent.com/36451701/133940803-db86d055-0090-4f57-bf00-46699dfd3507.png)
 
-##### Description of how they have trained the model thus far, and any additional training that will take place:
 
-![unsupervised_training2](https://user-images.githubusercontent.com/36451701/133941295-5c3f77cc-09b9-47de-95b2-b8c743e49f38.png)
 
 ##### Description of current accuracy score:
 
