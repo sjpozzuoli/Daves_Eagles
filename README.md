@@ -143,7 +143,7 @@ We will then show further analysis of the select cities. These cities were JUST 
 
  
   
-<li>Finally we will show the additional data analysis in Tableau and discusss the limitation of the study and questions for future discussion.</li>
+<li>Finally we will show the additional data analysis in Tableau and discuss the limitation of the study and questions for future discussion.</li>
 </ul>
 
 
