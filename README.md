@@ -52,7 +52,7 @@ Team members submit the working code for their machine learning model, as well a
 
 ### Machine Learning Model 2 - Supervised Machine Learning Simple Linear Regression to Predict Hotness Rank
 
-
+![supervised_connect_database2](https://user-images.githubusercontent.com/36451701/133947774-b9d9c117-242d-483a-a868-fd6590b009a6.png)
 
 ## SECOND SEGMENT RUBRIC
 
