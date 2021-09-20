@@ -52,7 +52,21 @@ Team members submit the working code for their machine learning model, as well a
 
 ### Machine Learning Model 2 - Supervised Machine Learning Simple Linear Regression to Predict Hotness Rank
 
+#### Connect Database to Machine Learning Model:
 ![supervised_connect_database2](https://user-images.githubusercontent.com/36451701/133947774-b9d9c117-242d-483a-a868-fd6590b009a6.png)
+
+#### Description of data preprocessing:
+![supervised_data_processing](https://user-images.githubusercontent.com/36451701/133948211-429558bd-6065-4e41-862c-793de498e0d0.png)
+
+#### Description of how data was split into training and testing sets:
+
+#### Explanation of model choice, including limitations and benefits:
+#### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
+#### Description of how they have trained the model thus far, and any additional training that will take place:
+#### Description of current accuracy score:
+
+
+
 
 ## SECOND SEGMENT RUBRIC
 
