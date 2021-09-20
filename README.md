@@ -21,6 +21,7 @@ Team members submit the working code for their machine learning model, as well a
 - Python 3.8.5
 - Google Colab
 - RStudio: 3.6.2
+- PgAdmin4
 - Jupyter Notebook
 
 ### Connect Database to Machine Learning Model:
