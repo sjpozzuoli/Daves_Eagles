@@ -51,7 +51,9 @@ Team members submit the working code for their machine learning model, as well a
 ![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133947230-cdf95f87-78ec-40b1-9227-cfd2dab4c1a1.png)
 
 
-##### Description of current accuracy score:
+### Machine Learning Model 2 - Supervised Machine Learning Simple Linear Regression to Predict Hotness Rank
+
+
 
 ## SECOND SEGMENT RUBRIC
 
