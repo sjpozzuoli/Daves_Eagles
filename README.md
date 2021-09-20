@@ -6,13 +6,26 @@ Group 4 Final Project
 
 
 ### Viz, presentation and code progression
-The Presentation itself will be in Tableau (not Google Slides) using the Story feature. 
-The intro will lead us into the discussion of the Machine Learning model of the project. 
-We will then go to the interactive tool itself. 
+<ul>
+ 
+<li>The Presentation itself will be in Tableau (not Google Slides) using the Story feature. </li>
+<li>The intro will lead us into the discussion of the Machine Learning model of the project. The majority of this discussion is embeded directly in this Github Third Segment Discussion. </li> 
+<li> We will then discuss data joins, data cleaning, use of posgres, Python and SQL.</li> 
+<li> We will then go to the interactive tool itself. </li> 
 The first encarnation of the tool is this interactive Tableau representation:
 This enables users to scrole through Realtor.com's Hotness ranking and discover into which of our machine learning groupings each city falls. 
 <img width="1404" alt="Screen Shot 2021-09-19 at 7 13 07 PM" src="https://user-images.githubusercontent.com/14239715/133946878-98e10252-efd0-402b-a85f-d83af49b7bf9.png">
-Secondly, we'll have the HTML/Javascript version of the tool. 
+Secondly, we'll show the HTML/Javascript version of the tool. 
+We have one interative version that is working: 
+<img width="1023" alt="Screen Shot 2021-09-19 at 7 52 20 PM" src="https://user-images.githubusercontent.com/14239715/133947055-bfff3b38-0848-49bd-955d-4edf87ce5ccb.png">
+and one that we're still working on: 
+<img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src="https://user-images.githubusercontent.com/14239715/133947065-7b72a054-739d-4fbe-bb4c-cd68ed41c7a1.png">
+But will be chosing one to connect to github pages.
+  
+<li>Finally we will show the additional data analysis in Tableau and discusss the limitation of the study and questions for future discussion.</li>
+
+
+
 
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
