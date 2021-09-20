@@ -16,6 +16,12 @@ Group 4 Final Project
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
+ 
+ #### Software:
+- Python 3.8.5
+- Google Colab
+- RStudio: 3.6.2
+- Jupyter Notebook
 
 ### Connect Database to Machine Learning Model:
 
@@ -129,12 +135,6 @@ We will then show further analysis of the select cities. These cities were JUST 
 
 
 
-
-### Machine Learning Model 1 - Unsupervised Clustering with KMeans
-Team members submit the working code for their machine learning model, as well as the following:
-
-### Machine Learning Model 2 - Supervised Simple Linear Regression to Predict Hotness Rank
-Team members submit the working code for their machine learning model, as well as the following:
 
 
 ## Second Segment Rubric
