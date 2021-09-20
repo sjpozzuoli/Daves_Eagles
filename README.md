@@ -59,6 +59,7 @@ Team members submit the working code for their machine learning model, as well a
 ![supervised_data_processing](https://user-images.githubusercontent.com/36451701/133948211-429558bd-6065-4e41-862c-793de498e0d0.png)
 
 #### Description of how data was split into training and testing sets:
+![supervised_train_test](https://user-images.githubusercontent.com/36451701/133948767-29308282-e2b9-42d4-b822-37b410beba14.png)
 
 #### Explanation of model choice, including limitations and benefits:
 #### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
