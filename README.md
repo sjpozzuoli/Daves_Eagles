@@ -8,6 +8,8 @@ Group 4 Final Project
 ### Viz, presentation and code progression
 <ul>
  
+ ![Description information](https://user-images.githubusercontent.com/81929616/133950126-5aa5be7b-57c5-4503-a051-c3a296ab8791.png)
+
 <li>The Presentation itself will be in Tableau (not Google Slides) using the Story feature. </li>
 <li>The intro will lead us into the discussion of the Machine Learning model of the project. The majority of this discussion is embeded directly in this Github Third Segment Discussion. </li> 
 <li> We will then discuss data joins, data cleaning, use of posgres, Python and SQL.</li> 
