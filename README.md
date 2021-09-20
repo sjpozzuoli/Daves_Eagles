@@ -15,6 +15,7 @@ Group 4 Final Project
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
  
  ### PgAdmin4 Database Integration 
+ Our team utilized a combination of Python Pandas, Jupyter Notebook and PgAdmin for dataset cleaning, storage and joining. We utilized a String Encoder to connect the work done between the two applications.
  
  
  
