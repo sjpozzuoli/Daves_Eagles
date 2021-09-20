@@ -113,6 +113,12 @@ Team members submit the working code for their machine learning model, as well a
 
  
 <li>The Presentation itself will be in Tableau (not Google Slides) using the Story feature. </li>
+<li>We chose the colors for color blind accessibility using ColorOracle, a program that shows the entire screen form the perspective of the top four color blind handicaps. 
+Below see our color choice of color palette as though they were viewed by a person with Deuternapia color blindness (the most common variety). 
+<img width="859" alt="Screen Shot 2021-09-20 at 10 39 34 AM" src="https://user-images.githubusercontent.com/14239715/134022303-bf3ed133-e73a-4e38-9a2e-eb1fab1086e4.png">
+
+ 
+ 
 <li>The intro will lead us into the discussion of the Machine Learning model of the project. The majority of this discussion is embeded directly in this Github Third Segment Discussion. </li> 
 <li> We will then discuss data joins, data cleaning, use of posgres, Python and SQL.</li> 
 <li> We will then go to the interactive tool itself. </li> 
