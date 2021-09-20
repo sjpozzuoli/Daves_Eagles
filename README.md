@@ -13,7 +13,8 @@ Team members submit the working code for their machine learning model, as well a
 #### Description of data preprocessing:
 
 #### Connect Database to Machine Learning Model:
-![unsupervised_db_connection](https://user-images.githubusercontent.com/36451701/133943107-44397901-6da6-4813-bc32-ac9502a9d26d.png)
+
+![supervised_connect_database](https://user-images.githubusercontent.com/36451701/133947517-3794d5d5-9102-4d35-8fef-b2b6e7ddff51.png)
 
 ![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
 
