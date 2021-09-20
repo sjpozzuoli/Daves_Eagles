@@ -36,6 +36,8 @@ Team members submit the working code for their machine learning model, as well a
 ![supervised_connect_database](https://user-images.githubusercontent.com/36451701/133947517-3794d5d5-9102-4d35-8fef-b2b6e7ddff51.png)
 
 ![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
+ 
+![unsupervised_data_cleaned](https://user-images.githubusercontent.com/36451701/134054863-4aeaad2a-64da-4d38-bcf0-33e59afb3a3f.png)
 
 ![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
 
