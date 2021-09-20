@@ -146,7 +146,7 @@ svg.selectAll("path")
 
 //this piece of code brings in the data and reshapes it to numberic from string. Runs great. 
 // Map the cities I have lived in!
-d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data_clusters_latlong_ready.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/html_site_static_Leaflet/data_clusters_latlong_july21.csv", function(data) {
   var data;
   data.forEach(function(d){
     //create number values from strings
@@ -160,10 +160,10 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main
     d.supply_score =+ d.supply_score;
     d.date = new Date(d.date);
     d.latitude =+ d.latitude;
-    d.latitude =  (function(val) { return val !== null; }).join(", ");
+    //d.latitude =  //code to erase rows with null values
     d.longitude =+ d.longitude;
     d.longitude = -Math.abs(d.longitude);
-    d.longitude = (function(val) { return val !== null; }).join(", ");
+    //d.longitude = //code to erase rows with null values
     d.class =+ d.class;
 
   //console.log(d);
