@@ -75,9 +75,9 @@ var path = d3.geo.path()               // path generator that will convert GeoJS
 		
 // Define linear scale for output
 var color = d3.scale.linear()
-			  .range(["rgb(213,222,217)","rgb(69,173,168)","rgb(84,36,55)","rgb(217,91,67)"]);
+			  .range(["rgb(165,110,255)","rgb(0,45,150)","rgb(0,157,154)","rgb(250,77,86)"]);
 
-var legendText = ["Cities Lived", "States Lived", "States Visited", "Nada"];
+var legendText = ["High Demand, High Supply", "Low Demand, Low Supply", "Low Demand, High Supply", "High Demand, Low Supply"];
 
 //Create SVG element and append map to the SVG
 var svg = d3.select("body")
@@ -160,7 +160,10 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main
     d.supply_score =+ d.supply_score;
     d.date = new Date(d.date);
     d.latitude =+ d.latitude;
+    d.latitude =  (function(val) { return val !== null; }).join(", ");
     d.longitude =+ d.longitude;
+    d.longitude = -Math.abs(d.longitude);
+    d.longitude = (function(val) { return val !== null; }).join(", ");
     d.class =+ d.class;
 
   //console.log(d);
@@ -173,20 +176,24 @@ svg.selectAll("circle")
 	.data(data)
 	.enter()
 	.append("circle")
+  //dots are being drawn just with reverse longitude (neg?)and off the map
 	.attr("cx", function(d) {
-    var coords = ([d.longitude, d.latitude])
+    var coords = projection([d.longitude, d.latitude])
     console.log("coords", coords)
-    //console.log(d.longitude, "d.longitude");
+    console.log(d.longitude, "d.longitude");
 		return coords[0];
 	})
 	.attr("cy", function(d) {
-		var coords = ([d.longitude, d.latitude])
+		var coords = projection([d.longitude, d.latitude])
     return coords[1];
 	})
-	.attr("r", function(d) {
+	
+  //size of circle working
+  .attr("r", function(d) {
 		return Math.sqrt(d.hotness_rank) * .05;
 	})
-		.style("fill", "rgb(217,91,67)")	
+	//todo: add if statement to correspond color with class	
+    .style("fill", "rgb(217,91,67)")	
 		.style("opacity", 0.85)	
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks" 
