@@ -64,6 +64,10 @@ Team members submit the working code for their machine learning model, as well a
 #### Predicting the Test set results:
 ![supervised_predict_test](https://user-images.githubusercontent.com/36451701/133948951-e2b7dd79-47a0-474c-aa8a-efb4c4e3aabd.png)
 
+#### Visualize Training Set results:
+![supervised_visualize_train](https://user-images.githubusercontent.com/36451701/133949367-8867f099-9e59-4455-9de8-c82e65398bea.png)
+
+
 #### Explanation of model choice, including limitations and benefits:
 #### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
 #### Description of how they have trained the model thus far, and any additional training that will take place:
