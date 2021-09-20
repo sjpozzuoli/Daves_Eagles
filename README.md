@@ -249,8 +249,6 @@ ________________________________________________________________________________
 4. Questions we hope to answer with the data
 - We hope to answer the question of which city will see an increase in real estate prices due to an influx of new residents. We will also attempt to determine which cities would be ideal for investing in real estate prior to this rush.
 
-#### In order to communicate for this project, we have used class time, office hours, a slack channel with all members and video chats outside of class time in order to coordinate roles and let others know when data was being uploaded to branches. 
-
 ### B) Github Repository - (Steve)
 Main Branch
   - Readme
