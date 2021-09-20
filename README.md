@@ -49,7 +49,7 @@ Team members submit the working code for their machine learning model, as well a
 ![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
 
 #### Explanation of model choice, including limitations and benefits:
-![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133947230-cdf95f87-78ec-40b1-9227-cfd2dab4c1a1.png)
+![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133947617-488362bc-7f12-476c-8d66-ee0d092a68c5.png)
 
 
 ### Machine Learning Model 2 - Supervised Machine Learning Simple Linear Regression to Predict Hotness Rank
