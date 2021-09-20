@@ -6,6 +6,8 @@
 <script src="http://d3js.org/topojson.v3.min.js"></script>
 <style type="text/css">
 
+
+
 /* On mouse hover, lighten state color */
 path:hover {
 	fill-opacity: .7;
@@ -14,9 +16,9 @@ path:hover {
 /* Style for Custom Tooltip */
 div.tooltip {   
  	position: absolute;           
-	text-align: center;           
-	width: 60px;                  
-	height: 28px;                 
+	text-align: left;           
+	width: 120px;                  
+	height: 100px;                 
 	padding: 2px;             
 	font: 12px sans-serif;        
 	background: white;   
@@ -160,11 +162,9 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/html_site
     d.supply_score =+ d.supply_score;
     d.date = new Date(d.date);
     d.latitude =+ d.latitude;
-    //d.latitude =  //code to erase rows with null values
     d.longitude =+ d.longitude;
     d.longitude = -Math.abs(d.longitude);
-    //d.longitude = //code to erase rows with null values
-    d.class =+ d.class;
+    d.class =+ Math.max(d.class);
 
   //console.log(d);
   //console.log(d.city);
@@ -193,7 +193,21 @@ svg.selectAll("circle")
 		return Math.sqrt(d.hotness_rank) * .05;
 	})
 	//todo: add if statement to correspond color with class	
-    .style("fill", "rgb(217,91,67)")	
+    //.style("fill", "rgb(217,91,67)")
+    .style("fill", function(d){
+      //console.log(d.class, 'class');
+      //console.log(typeof(d.class), 'class');
+
+          if(d.class == 0){
+            return "rgb(250,77,86)"
+          } else if(d.class == 1) { 
+            return "rgb(0,157,154)"
+          } else if(d.class == 2) { 
+            return "rgb(0,45,150)"
+          } else {
+            return "rgb(165,110,255)"
+          }
+        })                    // colour the marker fill	
 		.style("opacity", 0.85)	
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks" 
@@ -202,9 +216,9 @@ svg.selectAll("circle")
     	div.transition()        
       	   .duration(200)      
            .style("opacity", .9);      
-           div.text(d.place)
+           div.text("City: " + d.city_state + "    Machine Learning Class: " + d.class + "  Realtor.com hotness rank: " + d.hotness_rank)
            .style("left", (d3.event.pageX) + "px")     
-           .style("top", (d3.event.pageY - 28) + "px");    
+           .style("top", (d3.event.pageY - 50) + "px");    
 	})   
 
     // fade out tooltip on mouse out               
