@@ -10,8 +10,6 @@ Group 4 Final Project
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
 
-#### Description of data preprocessing:
-
 #### Connect Database to Machine Learning Model:
 
 ![supervised_connect_database](https://user-images.githubusercontent.com/36451701/133947517-3794d5d5-9102-4d35-8fef-b2b6e7ddff51.png)
