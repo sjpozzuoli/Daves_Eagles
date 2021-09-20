@@ -77,10 +77,8 @@ Team members submit the working code for their machine learning model, as well a
 #### Explanation of model choice, including limitations and benefits:
 ![supervised_model_explanation](https://user-images.githubusercontent.com/36451701/133950165-846547f4-5488-437c-bb20-ed957eb677b2.png)
 
-
-#### Description of how they have trained the model thus far, and any additional training that will take place:
 #### Description of current accuracy score:
-
+![supervised_model_accuary](https://user-images.githubusercontent.com/36451701/133950594-98e392ac-50b6-4756-b4d9-a8417555d632.png)
 
 
 
