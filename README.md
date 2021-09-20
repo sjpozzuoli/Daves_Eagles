@@ -85,6 +85,19 @@ Team members submit the working code for their machine learning model, as well a
 ### Description of current accuracy score:
 ![supervised_model_accuary](https://user-images.githubusercontent.com/36451701/133950594-98e392ac-50b6-4756-b4d9-a8417555d632.png)
 
+### Supervised Learning Model: Predicting Median Listing Price:
+![Supervised Learning 1](https://user-images.githubusercontent.com/81929616/133951866-ea45c9e6-3d3a-45e1-bd78-d02f87e6d129.png)
+
+### Cleaning the Data:
+![Supervised Learning 2](https://user-images.githubusercontent.com/81929616/133951894-8bba2a58-c181-4d90-99a4-6c4b9910149e.png)
+
+### Splitting the Data into Training and Test sets:
+![Supervised Learning 3](https://user-images.githubusercontent.com/81929616/133951913-7e8fd8fc-445c-46ff-bcb1-5ae622f95ddd.png)
+
+### Visualizing the Results:
+![Supervised Learning 4](https://user-images.githubusercontent.com/81929616/133951936-78b25521-d613-4701-bbe8-07313f2c6de9.png)
+
+ 
 <li>The Presentation itself will be in Tableau (not Google Slides) using the Story feature. </li>
 <li>The intro will lead us into the discussion of the Machine Learning model of the project. The majority of this discussion is embeded directly in this Github Third Segment Discussion. </li> 
 <li> We will then discuss data joins, data cleaning, use of posgres, Python and SQL.</li> 
