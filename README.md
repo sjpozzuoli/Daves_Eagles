@@ -14,7 +14,9 @@ Group 4 Final Project
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
  
- ###PgAdmin4 Database Integration 
+ ### PgAdmin4 Database Integration 
+ 
+ 
  
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
