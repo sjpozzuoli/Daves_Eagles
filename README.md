@@ -14,7 +14,8 @@ Group 4 Final Project
 <li> We will then go to the interactive tool itself. </li> 
 The first encarnation of the tool is this interactive Tableau representation:
 This enables users to scrole through Realtor.com's Hotness ranking and discover into which of our machine learning groupings each city falls. 
-<img width="1404" alt="Screen Shot 2021-09-19 at 7 13 07 PM" src="https://user-images.githubusercontent.com/14239715/133946878-98e10252-efd0-402b-a85f-d83af49b7bf9.png">
+<img width="1400" alt="Screen Shot 2021-09-19 at 8 09 00 PM" src="https://user-images.githubusercontent.com/14239715/133947444-62896529-9c48-4ce7-a87c-295e17e31508.png">
+
 Secondly, we'll show the HTML/Javascript version of the tool. 
 We have one interative version that is working: 
 <img width="1023" alt="Screen Shot 2021-09-19 at 7 52 20 PM" src="https://user-images.githubusercontent.com/14239715/133947055-bfff3b38-0848-49bd-955d-4edf87ce5ccb.png">
