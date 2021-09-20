@@ -184,7 +184,7 @@ svg.selectAll("circle")
     return coords[1];
 	})
 	.attr("r", function(d) {
-		return Math.sqrt(d.hotness_rank) * 1;
+		return Math.sqrt(d.hotness_rank) * .05;
 	})
 		.style("fill", "rgb(217,91,67)")	
 		.style("opacity", 0.85)	
