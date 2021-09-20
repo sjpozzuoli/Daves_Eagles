@@ -46,8 +46,6 @@ Team members submit the working code for their machine learning model, as well a
 
 ![unsupervised_city_clusters](https://user-images.githubusercontent.com/36451701/133946854-2ff11da0-fd42-4c43-ad1b-c9b6c857eaa7.png)
 
-![unsupervised_pivot](https://user-images.githubusercontent.com/36451701/133912486-8d363805-e7fa-4061-b3cc-fa5b924e5b88.png)
-
 #### Explanation of model choice, including limitations and benefits:
 ![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133947617-488362bc-7f12-476c-8d66-ee0d092a68c5.png)
 
