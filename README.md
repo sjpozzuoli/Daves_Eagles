@@ -13,6 +13,9 @@ Group 4 Final Project
  ### This Week: "Plug It In"
 
 *Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
+ 
+ ###PgAdmin4 Database Integration 
+ 
 
 ### Machine Learning Model 1 - Unsupervised Clustering with KMeans
 Team members submit the working code for their machine learning model, as well as the following:
@@ -23,6 +26,7 @@ Team members submit the working code for their machine learning model, as well a
 - RStudio: 3.6.2
 - PgAdmin4
 - Jupyter Notebook
+ 
 
 ### Connect Database to Machine Learning Model:
 
