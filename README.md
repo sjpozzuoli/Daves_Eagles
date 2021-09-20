@@ -67,6 +67,7 @@ Team members submit the working code for their machine learning model, as well a
 #### Visualize Training Set results:
 ![supervised_visualize_train](https://user-images.githubusercontent.com/36451701/133949367-8867f099-9e59-4455-9de8-c82e65398bea.png)
 
+![supervised_visualize_train_scatter](https://user-images.githubusercontent.com/36451701/133949595-78980a3f-ef4f-497a-9564-df5ecc1f84c5.png)
 
 #### Explanation of model choice, including limitations and benefits:
 #### Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables):
