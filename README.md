@@ -20,9 +20,14 @@ We have one interative version that is working:
 <img width="1023" alt="Screen Shot 2021-09-19 at 7 52 20 PM" src="https://user-images.githubusercontent.com/14239715/133947055-bfff3b38-0848-49bd-955d-4edf87ce5ccb.png">
 and one that we're still working on: 
 <img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src="https://user-images.githubusercontent.com/14239715/133947065-7b72a054-739d-4fbe-bb4c-cd68ed41c7a1.png">
+ 
+Which looked like this in an earlier iteration: 
+<img width="1379" alt="Screen Shot 2021-09-19 at 8 04 09 PM" src="https://user-images.githubusercontent.com/14239715/133947302-54a0d817-4c08-41e4-af6e-3847949d8596.png">
+
 But will be chosing one to connect to github pages.
   
 <li>Finally we will show the additional data analysis in Tableau and discusss the limitation of the study and questions for future discussion.</li>
+</ul>
 
 
 
