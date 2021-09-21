@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v3.min.js"></script>
 <style type="text/css">
+
+
 
 /* On mouse hover, lighten state color */
 path:hover {
@@ -13,9 +16,9 @@ path:hover {
 /* Style for Custom Tooltip */
 div.tooltip {   
  	position: absolute;           
-	text-align: center;           
-	width: 60px;                  
-	height: 28px;                 
+	text-align: left;           
+	width: 120px;                  
+	height: 100px;                 
 	padding: 2px;             
 	font: 12px sans-serif;        
 	background: white;   
@@ -54,9 +57,13 @@ http://bl.ocks.org/mbostock/3888852  */
 
 //this piece of code brings in the data and reshapes it to numberic from string. Runs great. 
 
-//Width and height of map
-var width = 960;
-var height = 500;
+//Width and height of map (adding relative margins to see if that effects placement of circles. makes no apparent difference.)
+var margin = { top: 0, left: 0, right: 0, bottom: 0},
+height = 500 - margin.top - margin.bottom,
+width = 960 - margin.left - margin.right;
+
+//var width = 960;
+//var height = 500;
 
 // D3 Projection
 var projection = d3.geo.albersUsa()
@@ -70,9 +77,9 @@ var path = d3.geo.path()               // path generator that will convert GeoJS
 		
 // Define linear scale for output
 var color = d3.scale.linear()
-			  .range(["rgb(213,222,217)","rgb(69,173,168)","rgb(84,36,55)","rgb(217,91,67)"]);
+			  .range(["rgb(165,110,255)","rgb(0,45,150)","rgb(0,157,154)","rgb(250,77,86)"]);
 
-var legendText = ["Cities Lived", "States Lived", "States Visited", "Nada"];
+var legendText = ["High Demand, High Supply", "Low Demand, Low Supply", "Low Demand, High Supply", "High Demand, Low Supply"];
 
 //Create SVG element and append map to the SVG
 var svg = d3.select("body")
@@ -141,7 +148,7 @@ svg.selectAll("path")
 
 //this piece of code brings in the data and reshapes it to numberic from string. Runs great. 
 // Map the cities I have lived in!
-d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data_clusters_latlong_ready.csv", function(data) {
+d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/html_site_static_Leaflet/data_clusters_latlong_july21.csv", function(data) {
   var data;
   data.forEach(function(d){
     //create number values from strings
@@ -156,7 +163,8 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main
     d.date = new Date(d.date);
     d.latitude =+ d.latitude;
     d.longitude =+ d.longitude;
-    d.class =+ d.class;
+    d.longitude = -Math.abs(d.longitude);
+    d.class =+ Math.max(d.class);
 
   //console.log(d);
   //console.log(d.city);
@@ -168,17 +176,38 @@ svg.selectAll("circle")
 	.data(data)
 	.enter()
 	.append("circle")
+  //dots are being drawn just with reverse longitude (neg?)and off the map
 	.attr("cx", function(d) {
+    var coords = projection([d.longitude, d.latitude])
+    console.log("coords", coords)
     console.log(d.longitude, "d.longitude");
-		return projection(d.longitude, d.latitude);
+		return coords[0];
 	})
 	.attr("cy", function(d) {
-		return projection(d.longitude, d.latitude);
+		var coords = projection([d.longitude, d.latitude])
+    return coords[1];
 	})
-	.attr("r", function(d) {
-		return Math.sqrt(d.hotness_rank) * 4;
+	
+  //size of circle working
+  .attr("r", function(d) {
+		return Math.sqrt(d.hotness_rank) * .05;
 	})
-		.style("fill", "rgb(217,91,67)")	
+	//todo: add if statement to correspond color with class	
+    //.style("fill", "rgb(217,91,67)")
+    .style("fill", function(d){
+      //console.log(d.class, 'class');
+      //console.log(typeof(d.class), 'class');
+
+          if(d.class == 0){
+            return "rgb(250,77,86)"
+          } else if(d.class == 1) { 
+            return "rgb(0,157,154)"
+          } else if(d.class == 2) { 
+            return "rgb(0,45,150)"
+          } else {
+            return "rgb(165,110,255)"
+          }
+        })                    // colour the marker fill	
 		.style("opacity", 0.85)	
 
 	// Modification of custom tooltip code provided by Malcolm Maclean, "D3 Tips and Tricks" 
@@ -187,9 +216,9 @@ svg.selectAll("circle")
     	div.transition()        
       	   .duration(200)      
            .style("opacity", .9);      
-           div.text(d.place)
+           div.text("City: " + d.city_state + "    Machine Learning Class: " + d.class + "  Realtor.com hotness rank: " + d.hotness_rank)
            .style("left", (d3.event.pageX) + "px")     
-           .style("top", (d3.event.pageY - 28) + "px");    
+           .style("top", (d3.event.pageY - 50) + "px");    
 	})   
 
     // fade out tooltip on mouse out               

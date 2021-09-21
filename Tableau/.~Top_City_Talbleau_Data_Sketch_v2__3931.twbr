@@ -727,8 +727,8 @@
         <aliases>
           <alias key='0' value='1| High Demand, High Supply' />
           <alias key='1' value='2| Low Demand, Low Supply' />
-          <alias key='2' value='3| High Demand, Low Supply' />
-          <alias key='3' value='4| Low Demand, High Supply' />
+          <alias key='2' value='3| Low Demand, High Supply' />
+          <alias key='3' value='4| High Demand, Low Supply' />
         </aliases>
       </column>
       <column caption='Community Score' datatype='integer' name='[community_score]' role='measure' type='quantitative' />
@@ -6192,9 +6192,90 @@
         <param name='target' value='Map of Hotness vs Our Hotness' />
       </command>
     </action>
+    <action caption='Highlight 3 (generated)' name='[Action3_48E7D1444DB947BC9B6B25E807F4B52B]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Analysis of NEXT ' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='City State' />
+        <param name='target' value='Analysis of NEXT ' />
+      </command>
+    </action>
   </actions>
   <worksheets>
-    <worksheet name='Emotional Index for Outliers (2)'>
+    <worksheet name='Cost of living Index'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
+            <column datatype='real' name='[Cost of Living Index]' role='measure' type='quantitative' />
+            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[Cost of Living Index]' derivation='Median' name='[med:Cost of Living Index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Cost of Living Index]' derivation='Sum' name='[sum:Cost of Living Index:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:Cost of Living Index:qk]' />
+              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
+              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[med:Cost of Living Index:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9A5C1311-1C5A-4786-92E6-28B225528B94}' />
+    </worksheet>
+    <worksheet name='Cost of living Index (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Bold' fontsize='10'>Cost of Living Index</run>
+            <run fontsize='10'> A high cost of living index is an expensive place to live.*</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -6226,7 +6307,11 @@
           </slices>
           <aggregation value='true' />
         </view>
-        <style />
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
@@ -6256,135 +6341,7 @@
         <rows />
         <cols />
       </table>
-      <simple-id uuid='{118C7972-DA84-4574-B09F-18697C98380E}' />
-    </worksheet>
-    <worksheet name='Emotional Index for Outliers (3)'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
-            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-            <column caption='Emotional Score' datatype='integer' name='[emotional_score]' role='measure' type='quantitative' />
-            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
-            <column-instance column='[emotional_score]' derivation='Sum' name='[sum:emotional_score:qk]' pivot='key' type='quantitative' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
-            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Circle' />
-            <encodings>
-              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:emotional_score:qk]' />
-              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
-              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:emotional_score:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-line-first' value='true' />
-                <format attr='mark-labels-line-last' value='true' />
-                <format attr='mark-labels-range-min' value='true' />
-                <format attr='mark-labels-range-max' value='true' />
-                <format attr='mark-labels-mode' value='all' />
-                <format attr='mark-labels-range-scope' value='pane' />
-                <format attr='mark-labels-range-field' value='' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows />
-        <cols />
-      </table>
-      <simple-id uuid='{9A5C1311-1C5A-4786-92E6-28B225528B94}' />
-    </worksheet>
-    <worksheet name='Emotional Index for Outliers (4)'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
-            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-            <column caption='Community Score' datatype='integer' name='[community_score]' role='measure' type='quantitative' />
-            <column-instance column='[community_score]' derivation='Max' name='[max:community_score:qk]' pivot='key' type='quantitative' />
-            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
-            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
-              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style />
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Circle' />
-            <encodings>
-              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:community_score:qk]' />
-              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
-              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:community_score:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-line-first' value='true' />
-                <format attr='mark-labels-line-last' value='true' />
-                <format attr='mark-labels-range-min' value='true' />
-                <format attr='mark-labels-range-max' value='true' />
-                <format attr='mark-labels-mode' value='all' />
-                <format attr='mark-labels-range-scope' value='pane' />
-                <format attr='mark-labels-range-field' value='' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows />
-        <cols />
-      </table>
-      <simple-id uuid='{B7C92B27-82CF-4860-8E05-97519AB1A0B0}' />
+      <simple-id uuid='{803EADCD-D024-4141-A30E-FDA18E3833E2}' />
     </worksheet>
     <worksheet name='Map of Hotness vs Our Hotness'>
       <layout-options>
@@ -6423,8 +6380,8 @@ a ML model to cluster segments and then speculate as to the </run>
               <aliases>
                 <alias key='0' value='1| High Demand, High Supply' />
                 <alias key='1' value='2| Low Demand, Low Supply' />
-                <alias key='2' value='3| High Demand, Low Supply' />
-                <alias key='3' value='4| Low Demand, High Supply' />
+                <alias key='2' value='3| Low Demand, High Supply' />
+                <alias key='3' value='4| High Demand, Low Supply' />
               </aliases>
             </column>
             <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
@@ -6629,7 +6586,7 @@ a ML model to cluster segments and then speculate as to the </run>
                 <projection name='EPSG:3857' u='-108.22433592661577' v='45.658838120026445' />
               </visual-coordinate>
             </point>
-            <body x='-351' y='7' />
+            <body x='-439' y='-86' />
           </annotation>
         </annotations>
       </table>
@@ -6646,8 +6603,8 @@ a ML model to cluster segments and then speculate as to the </run>
               <aliases>
                 <alias key='0' value='1| High Demand, High Supply' />
                 <alias key='1' value='2| Low Demand, Low Supply' />
-                <alias key='2' value='3| High Demand, Low Supply' />
-                <alias key='3' value='4| Low Demand, High Supply' />
+                <alias key='2' value='3| Low Demand, High Supply' />
+                <alias key='3' value='4| High Demand, Low Supply' />
               </aliases>
             </column>
             <column-instance column='[class]' derivation='Count' name='[cnt:class:qk]' pivot='key' type='quantitative' />
@@ -6684,12 +6641,145 @@ a ML model to cluster segments and then speculate as to the </run>
       </table>
       <simple-id uuid='{9F79B799-EE36-4566-8598-61301F566A8D}' />
     </worksheet>
+    <worksheet name='Mortage Rate'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
+            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Mortgage Rate' datatype='real' name='[mortgage_rate]' role='measure' type='quantitative' />
+            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mortgage_rate]' derivation='Sum' name='[sum:mortgage_rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:mortgage_rate:qk]' />
+              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
+              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:mortgage_rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{118C7972-DA84-4574-B09F-18697C98380E}' />
+    </worksheet>
+    <worksheet name='Mortage Rate (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
+            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[mortgage_rate]' derivation='Max' name='[max:mortgage_rate:qk]' pivot='key' type='quantitative' />
+            <column caption='Mortgage Rate' datatype='real' name='[mortgage_rate]' role='measure' type='quantitative' />
+            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:mortgage_rate:qk]' />
+              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
+              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:mortgage_rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2A6DBCB4-8A6A-4398-A536-F019B432213E}' />
+    </worksheet>
     <worksheet name='Outliers in the running for NEXT HOTTEST'>
       <layout-options>
         <title>
           <formatted-text>
-            <run>&lt;Sheet Name&gt;&#10;</run>
-            <run fontsize='10'>Realitor.com Hotness change over time</run>
+            <run>In the running for NEXT HOTTEST CITY
+</run>
+            <run fontsize='10'>Realitor.com </run>
+            <run bold='true' fontname='Tableau Bold' fontsize='10'>Hotness change over time</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontsize='10'>Look at the year over year progression of each cities&apos; hotness score. </run>
+            <run fontcolor='#666666' fontsize='9'>Cities like Columbus Ohio are lowering thier hotness rank. Their popularity is going down. Only Columbus, South Carolina&apos;s Hotness rank is improving over time.</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -6768,11 +6858,22 @@ a ML model to cluster segments and then speculate as to the </run>
           <style-rule element='axis'>
             <encoding attr='space' class='1' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' field-type='quantitative' fold='true' reverse='true' scope='rows' type='space' />
             <encoding attr='space' class='0' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' field-type='quantitative' reverse='true' scope='rows' type='space' />
-            <format attr='width' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' value='10' />
+            <format attr='width' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' value='44' />
+            <format attr='display' class='1' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' scope='rows' value='false' />
+            <format attr='title' class='0' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]' scope='rows' value='Hotness Rank' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='width' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[yr:date:ok]' value='88' />
             <format attr='width' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[tyr:date:qk]' value='88' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]' value='Select one of these &#10;NEXT HOTTEST CITIES &#10;to find your new home!'>
+              <formatted-text>
+                <run>Select one of these &#10;</run>
+                <run fontcolor='#ff0000'>NEXT HOTTEST CITIES</run>
+                <run> &#10;to find your new home!</run>
+              </formatted-text>
+            </format>
           </style-rule>
         </style>
         <panes>
@@ -6824,6 +6925,26 @@ a ML model to cluster segments and then speculate as to the </run>
       </table>
       <simple-id uuid='{CDD6910E-D6C4-42FA-B7A6-DE55FBE5E4A2}' />
     </worksheet>
+    <worksheet name='Sheet 11'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2AFEB261-608F-48E3-84BB-B85F39ECB908}' />
+    </worksheet>
     <worksheet name='Sheet 9'>
       <table>
         <view>
@@ -6843,6 +6964,142 @@ a ML model to cluster segments and then speculate as to the </run>
         <cols />
       </table>
       <simple-id uuid='{CA5863C8-8E5D-4E01-A12A-580CDAE49A3A}' />
+    </worksheet>
+    <worksheet name='Tax Rank'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
+            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tax_rank]' derivation='Sum' name='[sum:tax_rank:qk]' pivot='key' type='quantitative' />
+            <column caption='Tax Rank' datatype='integer' name='[tax_rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:tax_rank:qk]' />
+              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
+              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:tax_rank:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B7C92B27-82CF-4860-8E05-97519AB1A0B0}' />
+    </worksheet>
+    <worksheet name='Tax Rank (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Bold' fontsize='10'>Tax Rank, </run>
+            <run fontsize='10'>the higher the tax rank, the higher the percentage of personal income goes to taxes.*</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2021_happy' name='federated.1mgulqf0xrcu7213bmt9k1btwvhe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgulqf0xrcu7213bmt9k1btwvhe'>
+            <column caption='City State' datatype='string' name='[city_state]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[tax_rank]' derivation='Max' name='[max:tax_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[city_state]' derivation='None' name='[none:city_state:nk]' pivot='key' type='nominal' />
+            <column caption='Tax Rank' datatype='integer' name='[tax_rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;canton_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbia_sc&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;columbus_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;dayton_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;decatur_al&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;defiance_oh&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;freeport_il&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;jackson_tn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;madison_wi&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mankato_mn&quot;' />
+              <groupfilter function='member' level='[none:city_state:nk]' member='&quot;mount airy_nc&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:tax_rank:qk]' />
+              <text column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[none:city_state:nk]' />
+              <color column='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:tax_rank:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{16A223A3-16CF-4ABF-B639-B0847F2ED733}' />
     </worksheet>
     <worksheet name='are out top 10 cities in the other data sets'>
       <table>
@@ -7098,52 +7355,81 @@ a ML model to cluster segments and then speculate as to the </run>
   </worksheets>
   <dashboards>
     <dashboard name='Analysis of NEXT '>
-      <style />
-      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <style>
+        <style-rule element='dash-text'>
+          <format attr='vertical-align' id='dash-text_77' value='top' />
+          <format attr='text-align' id='dash-text_77' value='left' />
+        </style-rule>
+      </style>
+      <size maxheight='750' maxwidth='1400' minheight='750' minwidth='1400' sizing-mode='fixed' />
       <zones>
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
-          <zone h='98000' id='14' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
-            <zone h='98000' id='12' type-v2='layout-basic' w='82400' x='800' y='1000'>
-              <zone h='98000' id='3' type-v2='text' w='41200' x='42000' y='1000'>
-                <formatted-text>
-                  <run>Take some of the cities that the realitor hotness did not correspond to our machine learning model and look at their supply demand over time (to find NEXT hotest).
-
-Sync the happiness data into supply and demand to find cool stuff. </run>
-                </formatted-text>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-              <zone h='49000' id='11' name='Outliers in the running for NEXT HOTTEST' w='41200' x='800' y='50000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-              <zone h='49000' id='16' type-v2='empty' w='41200' x='800' y='1000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
+          <zone h='54000' id='55' param='horz' type-v2='layout-flow' w='65072' x='34357' y='44933'>
+            <zone h='54000' id='14' param='horz' type-v2='layout-flow' w='65072' x='34357' y='44933'>
+              <zone h='54000' id='12' type-v2='layout-basic' w='65072' x='34357' y='44933'>
+                <zone h='54000' id='16' type-v2='empty' w='65072' x='34357' y='44933'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
               </zone>
             </zone>
-            <zone fixed-size='160' h='98000' id='13' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
-              <zone h='30750' id='15' name='Outliers in the running for NEXT HOTTEST' pane-specification-id='1' param='[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]' type-v2='color' w='16000' x='83200' y='1000'>
-                <zone-style>
-                  <format attr='border-color' value='#000000' />
-                  <format attr='border-style' value='none' />
-                  <format attr='border-width' value='0' />
-                  <format attr='margin' value='4' />
-                </zone-style>
-              </zone>
-            </zone>
+          </zone>
+          <zone forceUpdate='true' h='43866' id='77' type-v2='text' w='98858' x='571' y='1067'>
+            <formatted-text>
+              <run fontname='Tableau Bold' fontsize='48'>And</run>
+              <run fontcolor='#ff0000' fontname='Tableau Bold' fontsize='48'> the Next</run>
+              <run fontname='Tableau Bold' fontsize='48'> hottest city is... </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>Our Machine Learning Segementation model showed us that all </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>of the </run>
+              <run bold='true' fontcolor='#000000' fontsize='10'>current hottest cities</run>
+              <run fontcolor='#333333' fontsize='10'> are in our first group: High Supply </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>and High Demand. This segment includes all of Realtor.com&apos;s top </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>ranked cities from #1 to # 246. For the </run>
+              <run fontcolor='#ff0000' fontsize='10'>NEXT</run>
+              <run fontcolor='#333333' fontsize='10'> hottest city, we began </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>our analysis with Decatur, Alabama as number #247 on Realtor.com&apos;s </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>hotness list, and the the first city NOT in our model&apos;s High Supply, </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>High Demand group. We then chose the next ten cities </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>on the hotness rank that were also NOT in our model&apos;s High Supply </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>and High Demand group, thinking that in this group the NEXT HOTTEST CITY </run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#333333' fontsize='10'>would lie. Use the following graphs to discover your next hottest city.</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='54000' id='11' name='Outliers in the running for NEXT HOTTEST' w='28143' x='571' y='44933'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='54000' id='78' type-v2='empty' w='5643' x='28714' y='44933'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
           </zone>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -7152,18 +7438,60 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
             <format attr='margin' value='8' />
           </zone-style>
         </zone>
+        <zone h='47067' id='15' name='Outliers in the running for NEXT HOTTEST' pane-specification-id='1' param='[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]' type-v2='color' w='14357' x='37500' y='12667' />
+        <zone h='46267' id='58' name='Tax Rank (2)' w='36071' x='78071' y='46533' />
+        <zone h='49333' id='60' name='Cost of living Index (2)' w='28143' x='46429' y='46800' />
+        <zone forceUpdate='' h='33333' id='76' param='https://discoversouthcarolina.com/articles/10-things-you-might-not-know-about-columbia-sc' type-v2='web' w='25357' x='77214' y='3600' />
+        <zone h='10133' id='79' type-v2='text' w='28786' x='47071' y='92533'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='8'>*Calculated by comparing the prices for a representative sample of goods, services and other items that would be in a typical family budget.</run>
+          </formatted-text>
+        </zone>
+        <zone h='13200' id='80' type-v2='text' w='18214' x='82071' y='87467'>
+          <formatted-text>
+            <run fontcolor='#333333' fontsize='8'>*a measure of tax burden: Unlike tax </run>
+            <run fontcolor='#333333' fontsize='8' italic='true'>rates</run>
+            <run fontcolor='#333333' fontsize='8'>, which vary widely based on an individual’s circumstances, tax </run>
+            <run fontcolor='#333333' fontsize='8' italic='true'>burden</run>
+            <run fontcolor='#333333' fontsize='8'> measures the proportion of total personal income that residents pay toward state and local taxes.</run>
+          </formatted-text>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <size maxheight='1400' minheight='1400' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='44' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='43' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
-                <zone h='98000' id='3' type-v2='text' w='41200' x='42000' y='1000'>
+            <zone h='100000' id='90' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97866' id='89' param='vert' type-v2='layout-flow' w='98858' x='571' y='1067'>
+                <zone forceUpdate='true' h='43866' id='77' type-v2='text' w='98858' x='571' y='1067'>
                   <formatted-text>
-                    <run>Take some of the cities that the realitor hotness did not correspond to our machine learning model and look at their supply demand over time (to find NEXT hotest).
-
-Sync the happiness data into supply and demand to find cool stuff. </run>
+                    <run fontname='Tableau Bold' fontsize='48'>And</run>
+                    <run fontcolor='#ff0000' fontname='Tableau Bold' fontsize='48'> the Next</run>
+                    <run fontname='Tableau Bold' fontsize='48'> hottest city is... </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>Our Machine Learning Segementation model showed us that all </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>of the </run>
+                    <run bold='true' fontcolor='#000000' fontsize='10'>current hottest cities</run>
+                    <run fontcolor='#333333' fontsize='10'> are in our first group: High Supply </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>and High Demand. This segment includes all of Realtor.com&apos;s top </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>ranked cities from #1 to # 246. For the </run>
+                    <run fontcolor='#ff0000' fontsize='10'>NEXT</run>
+                    <run fontcolor='#333333' fontsize='10'> hottest city, we began </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>our analysis with Decatur, Alabama as number #247 on Realtor.com&apos;s </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>hotness list, and the the first city NOT in our model&apos;s High Supply, </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>High Demand group. We then chose the next ten cities </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>on the hotness rank that were also NOT in our model&apos;s High Supply </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>and High Demand group, thinking that in this group the NEXT HOTTEST CITY </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#333333' fontsize='10'>would lie. Use the following graphs to discover your next hottest city.</run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -7173,7 +7501,7 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='49000' id='11' is-fixed='true' name='Outliers in the running for NEXT HOTTEST' w='41200' x='800' y='50000'>
+                <zone fixed-size='250' forceUpdate='' h='33333' id='76' is-fixed='true' param='https://discoversouthcarolina.com/articles/10-things-you-might-not-know-about-columbia-sc' type-v2='web' w='25357' x='77214' y='3600'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -7182,7 +7510,62 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='30750' id='15' name='Outliers in the running for NEXT HOTTEST' pane-specification-id='1' param='[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone fixed-size='280' h='54000' id='11' is-fixed='true' name='Outliers in the running for NEXT HOTTEST' w='28143' x='571' y='44933'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='47067' id='15' name='Outliers in the running for NEXT HOTTEST' pane-specification-id='1' param='[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]' type-v2='color' w='14357' x='37500' y='12667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46267' id='58' is-fixed='true' name='Tax Rank (2)' w='36071' x='78071' y='46533'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='49333' id='60' is-fixed='true' name='Cost of living Index (2)' w='28143' x='46429' y='46800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13200' id='80' type-v2='text' w='18214' x='82071' y='87467'>
+                  <formatted-text>
+                    <run fontcolor='#333333' fontsize='8'>*a measure of tax burden: Unlike tax </run>
+                    <run fontcolor='#333333' fontsize='8' italic='true'>rates</run>
+                    <run fontcolor='#333333' fontsize='8'>, which vary widely based on an individual’s circumstances, tax </run>
+                    <run fontcolor='#333333' fontsize='8' italic='true'>burden</run>
+                    <run fontcolor='#333333' fontsize='8'> measures the proportion of total personal income that residents pay toward state and local taxes.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10133' id='79' type-v2='text' w='28786' x='47071' y='92533'>
+                  <formatted-text>
+                    <run fontcolor='#333333' fontsize='8'>*Calculated by comparing the prices for a representative sample of goods, services and other items that would be in a typical family budget.</run>
+                  </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -7255,8 +7638,8 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='121' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='97866' id='120' param='vert' type-v2='layout-flow' w='98858' x='571' y='1067'>
+            <zone h='100000' id='149' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97866' id='148' param='vert' type-v2='layout-flow' w='98858' x='571' y='1067'>
                 <zone h='13067' id='75' name='Map of Hotness vs Our Hotness' param='[federated.1ky9rch1qgokv619kixpy12fxvhw].[attr:hotness_rank:qk]' type-v2='filter' values='database' w='31929' x='65429' y='4667'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -7321,13 +7704,37 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
             <format attr='margin' value='8' />
           </zone-style>
         </zone>
+        <zone forceUpdate='true' h='77875' id='51' type-v2='text' w='68700' x='27800' y='12250'>
+          <formatted-text>
+            <run>Better Data: 
+Break down model by region: 
+
+
+Data
+
+</run>
+            <run auto-url='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8' hyperlink='tabdoc:load-url url=&amp;quot;S&amp;quot;'>S</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>upply Score- The supply score is an index representing a city’s median days on market ranking compared to other cities.</run>
+            <run auto-url='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8' hyperlink='tabdoc:load-url url=&amp;quot;&#10;Demand Score- The demand score is an index representing a city’s listing page views per property ranking compared to other cities.&#10;Hotness Rank-The specified city’s Hotness rank, by Hotness score, compared to all other zip codes, counties, and metro areas. A rank value of 1 is considered the hottest (highest Hotness score).&#10;Hotness Rank Y/Y- The change in Hotness rank from the same month in the previous year. A positive value indicates that the geography’s Hotness has decreased (moved down in ranking), and a negative value indicates that its Hotness has increased (moved up in ranking).&#10;Median Listing Price Y/Y - The percentage change in the median listing price from the same month in the previous year.&#10;Median Days On Market Y/Y- The change in days in the median days on market from the same month in the previous year.&#10;Unique Viewers Per Property Y/Y- The change in unique viewers a typical property receives in the specified geography from the same month in the previous year.&#10;Mortgage Rate- The national mortgage rate for the corresponding month and year.&amp;quot;'>
+Demand Score- The demand score is an index representing a city’s listing page views per property ranking compared to other cities.
+Hotness Rank-The specified city’s Hotness rank, by Hotness score, compared to all other zip codes, counties, and metro areas. A rank value of 1 is considered the hottest (highest Hotness score).
+Hotness Rank Y/Y- The change in Hotness rank from the same month in the previous year. A positive value indicates that the geography’s Hotness has decreased (moved down in ranking), and a negative value indicates that its Hotness has increased (moved up in ranking).
+Median Listing Price Y/Y - The percentage change in the median listing price from the same month in the previous year.
+Median Days On Market Y/Y- The change in days in the median days on market from the same month in the previous year.
+Unique Viewers Per Property Y/Y- The change in unique viewers a typical property receives in the specified geography from the same month in the previous year.
+Mortgage Rate- The national mortgage rate for the corresponding month and year.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#1d1c1d' fontname='Slack-Lato,appleLogo,sans-serif' fontsize='8'>Æ&#10;</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='22' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='21' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='50' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='49' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='98000' id='3' type-v2='text' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>•break down by region</run>
@@ -7463,8 +7870,8 @@ Sync the happiness data into supply and demand to find cool stuff. </run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='42' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='71' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='70' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone forceUpdate='true' h='28500' id='6' type-v2='text' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>Database cohesion and Machine Learning Model Details</run>
@@ -7648,8 +8055,8 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='51' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='80' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='79' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone forceUpdate='true' h='98000' id='3' type-v2='text' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>Pick out a cluster or two, high suppluy and high demand, pick out hotness inconsistencies. 
@@ -7726,13 +8133,12 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
             <zone h='87444' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='99000' x='500' y='11667'>
               <flipboard active-id='2' nav-type='caption' show-nav-arrows='false'>
                 <story-points>
-                  <story-point caption='Details of the Machine Learning Model' captured-sheet='ML Model Details' id='3' />
                   <story-point caption='Next Hottest City! ' captured-sheet='Dashboard 1 from Static' id='2'>
                     <capturedDeltas>
                       <worksheet name='Map of Hotness vs Our Hotness'>
                         <filter class='quantitative' column='[federated.1ky9rch1qgokv619kixpy12fxvhw].[attr:hotness_rank:qk]' included-values='in-range'>
                           <min>10</min>
-                          <max>1571</max>
+                          <max>1564</max>
                         </filter>
                         <annotations>
                           <annotation class='point' delta-type='added' id='0' mark-position='1' pullback='0' text-width='223'>
@@ -7765,7 +8171,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
                           <annotation class='point' delta-type='edited' id='1' mark-position='1' pullback='0' text-width='180'>
                             <formatted-text>
                               <run fontalignment='0'>2) </run>
-                              <run fontalignment='0' fontname='Tableau Bold'>Dacator Alabama</run>
+                              <run fontalignment='0' fontname='Tableau Bold'>Decator Alabama</run>
                               <run fontalignment='0'>, at </run>
                               <run fontalignment='0' fontname='Tableau Bold'>Hotness Rank 247</run>
                               <run fontalignment='0'> is the first city that is </run>
@@ -7863,8 +8269,48 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
                       </worksheet>
                     </capturedDeltas>
                   </story-point>
-                  <story-point caption='Top twenty in the running for NEXT Hottest City' captured-sheet='Analysis of NEXT ' id='4' />
-                  <story-point captured-sheet='' id='5' />
+                  <story-point caption='Details of the Machine Learning Model' captured-sheet='ML Model Details' id='3' />
+                  <story-point caption='Top twenty in the running for NEXT Hottest City' captured-sheet='Analysis of NEXT ' id='4'>
+                    <capturedDeltas>
+                      <worksheet name='Outliers in the running for NEXT HOTTEST'>
+                        <annotations>
+                          <annotation class='point' delta-type='added' id='0' mark-position='1' pullback='12' text-width='180'>
+                            <formatted-text>
+                              <run bold='true' fontalignment='0'>This the ranking of this Columbia, South Carolina is progressing up. </run>
+                            </formatted-text>
+                            <point>
+                              <visual-coordinate class='mark'>
+                                <tuple-reference>
+                                  <tuple-descriptor>
+                                    <pane-descriptor y-index='1'>
+                                      <x-fields y-index='1'>
+                                        <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[tyr:date:qk]</field>
+                                      </x-fields>
+                                      <y-fields y-index='1'>
+                                        <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]</field>
+                                      </y-fields>
+                                    </pane-descriptor>
+                                    <columns>
+                                      <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]</field>
+                                      <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]</field>
+                                      <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[tyr:date:qk]</field>
+                                    </columns>
+                                  </tuple-descriptor>
+                                  <tuple>
+                                    <value>676</value>
+                                    <value>&quot;columbia_sc&quot;</value>
+                                    <value>#2021-01-01 00:00:00#</value>
+                                  </tuple>
+                                </tuple-reference>
+                              </visual-coordinate>
+                            </point>
+                            <body x='-81' y='-77' />
+                          </annotation>
+                        </annotations>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Data, What didn&apos;t work, and further analysis' captured-sheet='Further Analysis' id='5' />
                   <story-point captured-sheet='' id='6' />
                 </story-points>
               </flipboard>
@@ -7881,10 +8327,10 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
       <simple-id uuid='{6F5378AF-53F5-4955-B034-1249660CAE20}' />
     </dashboard>
   </dashboards>
-  <windows pres-mode='true' source-height='51'>
+  <windows source-height='51'>
     <window class='dashboard' maximized='true' name='SPLASH PAGE' tab-color='#17927d'>
       <viewpoints />
-      <active id='5' />
+      <active id='-1' />
       <simple-id uuid='{1B963B9D-11D4-455A-B32B-79A2EE743FE9}' />
     </window>
     <window class='dashboard' name='Dashboard 1 from Static' tab-color='#6e597f'>
@@ -7894,7 +8340,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
           <default-map-tool-selection tool='2' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='40' />
       <simple-id uuid='{D95CB0F8-E787-4179-A053-C910661CBD26}' />
     </window>
     <window class='dashboard' name='Notes'>
@@ -7909,16 +8355,18 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
     </window>
     <window class='dashboard' name='Analysis of NEXT '>
       <viewpoints>
+        <viewpoint name='Cost of living Index (2)' />
         <viewpoint name='Outliers in the running for NEXT HOTTEST'>
           <zoom type='entire-view' />
         </viewpoint>
+        <viewpoint name='Tax Rank (2)' />
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{7D7CF5D4-B474-4D05-A692-697B76BE20DD}' />
     </window>
     <window class='dashboard' name='Further Analysis'>
       <viewpoints />
-      <active id='-1' />
+      <active id='51' />
       <simple-id uuid='{D2A763BA-89BA-4379-8FDD-47BDC343E944}' />
     </window>
     <window class='worksheet' name='Map of Hotness vs Our Hotness'>
@@ -8034,7 +8482,147 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
       </cards>
       <simple-id uuid='{D3D9C749-419C-4D10-871B-27C7F67A9939}' />
     </window>
-    <window class='worksheet' name='Emotional Index for Outliers (2)'>
+    <window class='worksheet' name='Mortage Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:mortgage_rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{68685C1B-51D1-4CC4-9645-E8CCD023FE28}' />
+    </window>
+    <window class='worksheet' name='Mortage Rate (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:mortgage_rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{75805E2B-B806-4B15-8B7C-7C8B02AFE44F}' />
+    </window>
+    <window class='worksheet' name='Tax Rank'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:tax_rank:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{16E0A270-F88F-4AB8-9996-55370611CF7A}' />
+    </window>
+    <window class='worksheet' name='Tax Rank (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:tax_rank:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{903C58CE-7B56-470D-9528-4F0524DF18B9}' />
+    </window>
+    <window class='worksheet' name='Cost of living Index'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[med:Cost of Living Index:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C2E8E668-E409-4A39-A097-EDF4F78E2E4B}' />
+    </window>
+    <window class='worksheet' name='Cost of living Index (2)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -8060,63 +8648,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{68685C1B-51D1-4CC4-9645-E8CCD023FE28}' />
-    </window>
-    <window class='worksheet' name='Emotional Index for Outliers (4)'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[max:community_score:qk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{16E0A270-F88F-4AB8-9996-55370611CF7A}' />
-    </window>
-    <window class='worksheet' name='Emotional Index for Outliers (3)'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='0' param='[federated.1mgulqf0xrcu7213bmt9k1btwvhe].[sum:emotional_score:qk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{C2E8E668-E409-4A39-A097-EDF4F78E2E4B}' />
+      <simple-id uuid='{78F69456-7E48-42F6-93F7-14D08E1AF49D}' />
     </window>
     <window class='worksheet' name='are out top 10 cities in the other data sets'>
       <cards>
@@ -8186,6 +8718,29 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
         </edge>
       </cards>
       <simple-id uuid='{876DF011-1DBF-4B86-8221-CDB22BAB9C12}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9FFB0B0E-BC1C-41A3-8D55-F33B918E7566}' />
     </window>
   </windows>
 </workbook>
