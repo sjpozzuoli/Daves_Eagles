@@ -8328,12 +8328,12 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
     </dashboard>
   </dashboards>
   <windows source-height='51'>
-    <window class='dashboard' maximized='true' name='SPLASH PAGE' tab-color='#17927d'>
+    <window class='dashboard' name='SPLASH PAGE' tab-color='#17927d'>
       <viewpoints />
-      <active id='-1' />
+      <active id='5' />
       <simple-id uuid='{1B963B9D-11D4-455A-B32B-79A2EE743FE9}' />
     </window>
-    <window class='dashboard' name='Dashboard 1 from Static' tab-color='#6e597f'>
+    <window class='dashboard' maximized='true' name='Dashboard 1 from Static' tab-color='#6e597f'>
       <viewpoints>
         <viewpoint name='Map of Hotness vs Our Hotness'>
           <zoom type='entire-view' />
