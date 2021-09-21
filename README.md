@@ -137,7 +137,8 @@ and also, one that is working using D3, Javascript and HTML:
  <img width="1065" alt="Screen Shot 2021-09-20 at 8 19 26 PM" src="https://user-images.githubusercontent.com/14239715/134093670-c91b81df-faa2-47f1-8a22-418ea6c77af6.png"
 
  The iteration for the D3 map is as follows. 
-<img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src="https://user-images.githubusercontent.com/14239715/133947065-7b72a054-739d-4fbe-bb4c-cd68ed41c7a1.png">
+<img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src=<img width="1065" alt="Screen Shot 2021-09-20 at 8 19 26 PM" src="https://user-images.githubusercontent.com/14239715/134093769-04cd17ef-99a2-4ace-8c3e-a75e9a879bfc.png">
+
  
 Which looked like this in an earlier iteration: 
 <img width="1379" alt="Screen Shot 2021-09-19 at 8 04 09 PM" src="https://user-images.githubusercontent.com/14239715/133947302-54a0d817-4c08-41e4-af6e-3847949d8596.png">
