@@ -6586,7 +6586,7 @@ a ML model to cluster segments and then speculate as to the </run>
                 <projection name='EPSG:3857' u='-108.22433592661577' v='45.658838120026445' />
               </visual-coordinate>
             </point>
-            <body x='-351' y='7' />
+            <body x='-439' y='-86' />
           </annotation>
         </annotations>
       </table>
@@ -7704,6 +7704,30 @@ a ML model to cluster segments and then speculate as to the </run>
             <format attr='margin' value='8' />
           </zone-style>
         </zone>
+        <zone forceUpdate='true' h='77875' id='51' type-v2='text' w='68700' x='27800' y='12250'>
+          <formatted-text>
+            <run>Better Data: 
+Break down model by region: 
+
+
+Data
+
+</run>
+            <run auto-url='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8' hyperlink='tabdoc:load-url url=&amp;quot;S&amp;quot;'>S</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='8'>upply Score- The supply score is an index representing a city’s median days on market ranking compared to other cities.</run>
+            <run auto-url='true' fontcolor='#000000' fontname='Benton Sans Book' fontsize='8' hyperlink='tabdoc:load-url url=&amp;quot;&#10;Demand Score- The demand score is an index representing a city’s listing page views per property ranking compared to other cities.&#10;Hotness Rank-The specified city’s Hotness rank, by Hotness score, compared to all other zip codes, counties, and metro areas. A rank value of 1 is considered the hottest (highest Hotness score).&#10;Hotness Rank Y/Y- The change in Hotness rank from the same month in the previous year. A positive value indicates that the geography’s Hotness has decreased (moved down in ranking), and a negative value indicates that its Hotness has increased (moved up in ranking).&#10;Median Listing Price Y/Y - The percentage change in the median listing price from the same month in the previous year.&#10;Median Days On Market Y/Y- The change in days in the median days on market from the same month in the previous year.&#10;Unique Viewers Per Property Y/Y- The change in unique viewers a typical property receives in the specified geography from the same month in the previous year.&#10;Mortgage Rate- The national mortgage rate for the corresponding month and year.&amp;quot;'>
+Demand Score- The demand score is an index representing a city’s listing page views per property ranking compared to other cities.
+Hotness Rank-The specified city’s Hotness rank, by Hotness score, compared to all other zip codes, counties, and metro areas. A rank value of 1 is considered the hottest (highest Hotness score).
+Hotness Rank Y/Y- The change in Hotness rank from the same month in the previous year. A positive value indicates that the geography’s Hotness has decreased (moved down in ranking), and a negative value indicates that its Hotness has increased (moved up in ranking).
+Median Listing Price Y/Y - The percentage change in the median listing price from the same month in the previous year.
+Median Days On Market Y/Y- The change in days in the median days on market from the same month in the previous year.
+Unique Viewers Per Property Y/Y- The change in unique viewers a typical property receives in the specified geography from the same month in the previous year.
+Mortgage Rate- The national mortgage rate for the corresponding month and year.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#1d1c1d' fontname='Slack-Lato,appleLogo,sans-serif' fontsize='8'>Æ&#10;</run>
+            <run>Æ&#10;&#10;</run>
+          </formatted-text>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
@@ -8114,7 +8138,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
                       <worksheet name='Map of Hotness vs Our Hotness'>
                         <filter class='quantitative' column='[federated.1ky9rch1qgokv619kixpy12fxvhw].[attr:hotness_rank:qk]' included-values='in-range'>
                           <min>10</min>
-                          <max>1571</max>
+                          <max>1564</max>
                         </filter>
                         <annotations>
                           <annotation class='point' delta-type='added' id='0' mark-position='1' pullback='0' text-width='223'>
@@ -8283,36 +8307,10 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
                             <body x='-81' y='-77' />
                           </annotation>
                         </annotations>
-                        <selection-collection>
-                          <tuple-selection>
-                            <tuple-reference>
-                              <tuple-descriptor>
-                                <pane-descriptor>
-                                  <x-fields>
-                                    <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[tyr:date:qk]</field>
-                                  </x-fields>
-                                  <y-fields>
-                                    <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]</field>
-                                  </y-fields>
-                                </pane-descriptor>
-                                <columns>
-                                  <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[max:hotness_rank:qk]</field>
-                                  <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[none:city_state:nk]</field>
-                                  <field>[federated.1ky9rch1qgokv619kixpy12fxvhw].[tyr:date:qk]</field>
-                                </columns>
-                              </tuple-descriptor>
-                              <tuple>
-                                <value>1149</value>
-                                <value>&quot;columbia_sc&quot;</value>
-                                <value>#2020-01-01 00:00:00#</value>
-                              </tuple>
-                            </tuple-reference>
-                          </tuple-selection>
-                        </selection-collection>
                       </worksheet>
                     </capturedDeltas>
                   </story-point>
-                  <story-point captured-sheet='' id='5' />
+                  <story-point caption='Data, What didn&apos;t work, and further analysis' captured-sheet='Further Analysis' id='5' />
                   <story-point captured-sheet='' id='6' />
                 </story-points>
               </flipboard>
@@ -8332,7 +8330,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
   <windows source-height='51'>
     <window class='dashboard' maximized='true' name='SPLASH PAGE' tab-color='#17927d'>
       <viewpoints />
-      <active id='5' />
+      <active id='-1' />
       <simple-id uuid='{1B963B9D-11D4-455A-B32B-79A2EE743FE9}' />
     </window>
     <window class='dashboard' name='Dashboard 1 from Static' tab-color='#6e597f'>
@@ -8368,7 +8366,7 @@ I&apos;m in NYC and I wan tto move to FLA, where should I go. </run>
     </window>
     <window class='dashboard' name='Further Analysis'>
       <viewpoints />
-      <active id='-1' />
+      <active id='51' />
       <simple-id uuid='{D2A763BA-89BA-4379-8FDD-47BDC343E944}' />
     </window>
     <window class='worksheet' name='Map of Hotness vs Our Hotness'>
