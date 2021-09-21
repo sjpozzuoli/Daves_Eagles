@@ -141,12 +141,13 @@ But will be chosing one to connect to github pages.
  
  
 We will then show further analysis of the select cities. These cities were JUST UNDER the hotest 'high supply high demand' category segmented by our model. To find the 'next hotest city' we did the following analysis. The user can chose the city by the legend and discover the corresponding city selection. The layout for these analysis' is not finished. 
-<img width="1519" alt="Screen Shot 2021-09-19 at 9 43 19 PM" src="https://user-images.githubusercontent.com/14239715/133950422-7e4ce3d4-d699-4f0a-b26c-359175fea3d5.png">
+
 
  
   
 <li>Finally we will show the additional data analysis in Tableau and discuss the limitation of the study and questions for future discussion.</li>
 </ul>
+<img width="1528" alt="Screen Shot 2021-09-20 at 10 50 11 AM" src="https://user-images.githubusercontent.com/14239715/134093409-d7c94601-bd7e-4529-9ccd-8b8374d7b1f1.png">
 
 
 
