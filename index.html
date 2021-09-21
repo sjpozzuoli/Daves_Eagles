@@ -55,7 +55,7 @@ body {
 .legend {
 	position:absolute;
 	left:800px;
-	top:700px;
+	top:800px;
 }
 
 </style>
@@ -234,10 +234,9 @@ svg.selectAll("circle")
 	})
 	
   //size of circle working
-  .attr("r", function(d) {
+  	.attr("r", function(d) {
 	  	console.log(d.hotness_rank);
 		return Math.sqrt(d.hotness_rank) * .1;
-
 	})
 	//todo: add if statement to correspond color with class	
     //.style("fill", "rgb(217,91,67)")
