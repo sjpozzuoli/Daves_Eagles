@@ -1,6 +1,36 @@
 # Daves_Eagles
 Group 4 Final Project
 ## Andrew
+Task - Merge data_clusters_ready.csv and us_cities.csv in order to add cities coordinates for mapping in HTML.
+1. Load files to Jupyter Notebook
+<img width="1250" alt="load_files" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/load_files.png>
+     
+2. Join city and state into one column for both datasets, in order to get unique index for merging. 
+<img width="1250" alt="join" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/join_city_state.png>
+<img width="1250" alt="join2" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/join_city_state_clusters.png>     
+
+3. Change city_state column to "all lower case letters" to match during merging. Also drop duplicates.
+<img width="1250" alt="lower_case" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/lower_case.png>  
+     
+4. Merge two datasets  
+<img width="1250" alt="merge" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/merge_data.png>
+     
+5. Filter result by latest month (July 2021)
+<img width="1250" alt="merge" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/filter_july.png>
+
+6. Drop N/As and duplicates, create local files based on resulted data.
+<img width="1250" alt="merge" 
+     src=https://github.com/sjpozzuoli/Daves_Eagles/blob/504427c50ac3044f45537c0c09a324e6f9cbd373/Resource_Main/map/drop_na_dupl.png>
+
+          
+
+
 HTML version of the map
 <img width="1250" alt="map" 
      src=https://github.com/sjpozzuoli/Daves_Eagles/blob/8658275fc86d45587897bbf8e04eea5981120978/Resource_Main/map.png>
