@@ -129,9 +129,14 @@ This enables users to scrole through Realtor.com's Hotness ranking and discover 
 <img width="1597" alt="Screen Shot 2021-09-19 at 8 11 45 PM" src="https://user-images.githubusercontent.com/14239715/133947521-670b9f46-fb49-4209-b208-60372d6d983d.png">
 
 Secondly, we'll show the HTML/Javascript version of the tool. 
-We have one interative version that is working: 
+We have TWO(!) interative version that is working. First, one working using MapBox: 
 <img width="1023" alt="Screen Shot 2021-09-19 at 7 52 20 PM" src="https://user-images.githubusercontent.com/14239715/133947055-bfff3b38-0848-49bd-955d-4edf87ce5ccb.png">
-and one that we're still working on: 
+ 
+ 
+and also, one that is working using D3, Javascript and HTML:
+ <img width="1065" alt="Screen Shot 2021-09-20 at 8 19 26 PM" src="https://user-images.githubusercontent.com/14239715/134093670-c91b81df-faa2-47f1-8a22-418ea6c77af6.png"
+
+ The iteration for the D3 map is as follows. 
 <img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src="https://user-images.githubusercontent.com/14239715/133947065-7b72a054-739d-4fbe-bb4c-cd68ed41c7a1.png">
  
 Which looked like this in an earlier iteration: 
