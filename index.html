@@ -11,7 +11,7 @@
 <style type="text/css">
 
 
-
+/*CSS Code*/
 /* On mouse hover, lighten state color */
 path:hover {
 	fill-opacity: .7;
@@ -37,7 +37,7 @@ div.tooltip {
  	position: absolute;           
 	text-align: left;           
 	width: 120px;                  
-	height: 100px;                 
+	height: 60px;                 
 	padding: 2px;             
 	font: 12px sans-serif;        
 	background: white;   
@@ -54,9 +54,12 @@ body {
 /* Legend Position Style */
 .legend {
 	position:absolute;
-	left:800px;
+	left:900px;
 	top:800px;
 }
+
+
+
 
 </style>
 </head>
@@ -71,7 +74,7 @@ body {
 			<h3>Realtor.com created a ranking system for the current
 				hottest cities based on Supply vs Demand. We built 
 				a ML model to cluster segments and then speculate as to the <span style="color: red">Next</span> Hottest city. </h3>
-			<p>Use the interactive charts below to explore the dataset</p>
+			<p>Use the interactive charts below to explore the dataset. Color = Machine Learning model's clusters, size = Realtor.com's Hotness rank.</p>
 		</div>
 	</div>
 
@@ -189,7 +192,7 @@ svg.selectAll("path")
 	}
 });
 
-//this piece of code brings in the data and reshapes it to numberic from string. Runs great. 
+//this piece of code brings in the data and reshapes it to numberic from string, and date.
 // Map the cities I have lived in!
 d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/html_site_static_Leaflet/data_clusters_latlong_july21.csv", function(data) {
   var data;
@@ -209,23 +212,18 @@ d3.csv("https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/html_site
     d.longitude = -Math.abs(d.longitude);
     d.class =+ Math.max(d.class);
 
-  //console.log(d);
-  //console.log(d.city);
+//Combined city and state to one variable
   var city_state = d.city + ", " + d.state;
-      //console.log(city_state);
     });
-//console.log(data, "data");
 
-
+	
+//placing the circles on the map
 svg.selectAll("circle")
 	.data(data)
 	.enter()
 	.append("circle")
-  //dots are being drawn just with reverse longitude (neg?)and off the map
 	.attr("cx", function(d) {
     var coords = projection([d.longitude, d.latitude])
-    //console.log("coords", coords)
-    //console.log(d.longitude, "d.longitude");
 		return coords[0];
 	})
 	.attr("cy", function(d) {
@@ -233,16 +231,12 @@ svg.selectAll("circle")
     return coords[1];
 	})
 	
-  //size of circle working
+  //size of circle
   	.attr("r", function(d) {
-	  	console.log(d.hotness_rank);
 		return Math.sqrt(d.hotness_rank) * .1;
 	})
-	//todo: add if statement to correspond color with class	
-    //.style("fill", "rgb(217,91,67)")
+  //color of circle
     .style("fill", function(d){
-      //console.log(d.class, 'class');
-      //console.log(typeof(d.class), 'class');
 
           if(d.class == 0){
             return "rgb(250,77,86)"
@@ -275,21 +269,15 @@ svg.selectAll("circle")
     });
 });
 
-// svg = d3.select("#map").append("circle")
-//       .attr("width", width + margin.left + margin.right)
-//       .attr("height", height+margin.bottom + margin.top)
-//       .attr('class', 'well');
-
-  // do we need this bit? var g = svg.append("g")
-  d3.select("#goal").on("input", function() {
-    goal = +this.value;
-    d3.select('#goal-value').text(goal);
+	//Slider code
+  	d3.select("#goal").on("input", function() {
+    	goal = +this.value;
+    	d3.select('#goal-value').text(goal);
 
     svg.selectAll("circle").each(function(d) { 
         this.style.opacity = d.hotness_rank < goal ? 1 : 0; 
-		//console.log('test slider');
-      });
-  });
+      	});
+  	});
 
 
 
