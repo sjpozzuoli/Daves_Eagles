@@ -1,8 +1,242 @@
 # Daves_Eagles
 Group 4 Final Project
 
+## Third Segment Rubric
+### This Week: "Plug It In"
+
+
+### Viz, presentation and code progression
+<ul>
+ 
+JS Link: https://sjpozzuoli.github.io/Daves_Eagles/ 
+
+JS Link 2: https://andgerashchenko.github.io/Daves_Eagles_vizmap/ 
+ 
+ ![Description information](https://user-images.githubusercontent.com/81929616/133950126-5aa5be7b-57c5-4503-a051-c3a296ab8791.png)
+ 
+ ### This Week: "Plug It In"
+
+*Connect your final database to your model, continue to train your model, and create your dashboard presentation.*
+ 
+ ### PgAdmin4 Database Integration 
+ Our team utilized a combination of Python Pandas, Jupyter Notebook and PgAdmin for dataset cleaning, storage and joining. We utilized a String Encoder to connect the work done between the two applications.
+ 
+ 
+ 
+
+### Machine Learning Model 1 - Unsupervised Clustering with KMeans
+Team members submit the working code for their machine learning model, as well as the following:
+ 
+ #### Software:
+- Python 3.8.5
+- Google Colab
+- RStudio: 3.6.2
+- PgAdmin4
+- Jupyter Notebook
+ 
+
+### Connect Database to Machine Learning Model:
+
+![supervised_connect_database](https://user-images.githubusercontent.com/36451701/133947517-3794d5d5-9102-4d35-8fef-b2b6e7ddff51.png)
+
+![pgadmin_data](https://user-images.githubusercontent.com/36451701/133911547-c9cd318b-1659-4897-9530-9b7d6c83166a.png)
+ 
+![unsupervised_data_cleaned](https://user-images.githubusercontent.com/36451701/134054863-4aeaad2a-64da-4d38-bcf0-33e59afb3a3f.png)
+
+![connect_db_1](https://user-images.githubusercontent.com/36451701/133911713-5b7fb47c-b6e2-422c-a91e-73881c316591.png)
+
+### Description of feature engineering and the feature selection, including their decision-making process:
+![unsupervised_correlations_matrix](https://user-images.githubusercontent.com/36451701/133945037-8679dd9d-98f0-46fa-b200-06a15ae75318.png)
+
+![unsupervised_outliers](https://user-images.githubusercontent.com/36451701/133944288-f4c4ec9b-7f0f-434a-8746-9a008718c229.png)
+
+![feature_selection](https://user-images.githubusercontent.com/36451701/133911789-b1d49421-bf6a-4041-aadb-798e91f90bfe.png)
+
+![identify_outliers](https://user-images.githubusercontent.com/36451701/133911808-e0f488e2-9217-479b-add1-cf088731a63a.png)
+
+
+### Description of how data was split into training and testing sets:
+
+![unsupervised_test_train](https://user-images.githubusercontent.com/36451701/133942704-4b105e2f-6b1f-4e71-afbf-ed0e709fc33e.png)
+
+![unsupervised_thedataset](https://user-images.githubusercontent.com/36451701/133945283-1dfe6dc9-7ae6-48a9-858b-581e49dd9308.png)
+
+![unsupervised_optimal_clusters](https://user-images.githubusercontent.com/36451701/133945162-c299c195-24e4-4faf-b064-54de8d361a07.png)
+
+![unsupervised_elbow_method](https://user-images.githubusercontent.com/36451701/133945420-5668dd19-1b34-413f-8619-9a803a44db9c.png)
+
+![unsupervised_training_kmeans](https://user-images.githubusercontent.com/36451701/133946080-0dfb965c-60e6-4d8b-b743-d502ad1b6945.png)
+
+![unsupervised_cluster_matplotlib](https://user-images.githubusercontent.com/36451701/133946352-da0a72f2-f4e0-4891-a38f-cc67e413c892.png)
+
+![unsupervised_city_clusters](https://user-images.githubusercontent.com/36451701/133946854-2ff11da0-fd42-4c43-ad1b-c9b6c857eaa7.png)
+
+### Explanation of model choice, including limitations and benefits:
+![unsupervised_insights](https://user-images.githubusercontent.com/36451701/133947617-488362bc-7f12-476c-8d66-ee0d092a68c5.png)
+
+
+### Machine Learning Model 2 - Supervised Machine Learning Simple Linear Regression to Predict Hotness Rank
+
+### Connect Database to Machine Learning Model:
+![supervised_connect_database2](https://user-images.githubusercontent.com/36451701/133947774-b9d9c117-242d-483a-a868-fd6590b009a6.png)
+
+### Description of data preprocessing:
+![supervised_data_processing](https://user-images.githubusercontent.com/36451701/133948211-429558bd-6065-4e41-862c-793de498e0d0.png)
+
+### Description of how data was split into training and testing sets:
+![supervised_train_test](https://user-images.githubusercontent.com/36451701/133948767-29308282-e2b9-42d4-b822-37b410beba14.png)
+
+### Predicting the Test set results:
+![supervised_predict_test](https://user-images.githubusercontent.com/36451701/133948951-e2b7dd79-47a0-474c-aa8a-efb4c4e3aabd.png)
+
+### Visualize Training Set results:
+![supervised_visualize_train](https://user-images.githubusercontent.com/36451701/133949367-8867f099-9e59-4455-9de8-c82e65398bea.png)
+
+![supervised_visualize_train_scatter](https://user-images.githubusercontent.com/36451701/133949595-78980a3f-ef4f-497a-9564-df5ecc1f84c5.png)
+
+### Visualize Test Set results:
+![supervised_visualize_test_scatter](https://user-images.githubusercontent.com/36451701/133949892-20126f2e-f1e2-48cb-a9ba-7f88b40d07e9.png)
+
+![supervised_visualize_test_scatter2](https://user-images.githubusercontent.com/36451701/133950015-fb5b3305-525c-4d94-a9af-f859bb138570.png)
+
+### Explanation of model choice, including limitations and benefits:
+![supervised_model_explanation](https://user-images.githubusercontent.com/36451701/133950165-846547f4-5488-437c-bb20-ed957eb677b2.png)
+
+### Description of current accuracy score:
+![supervised_model_accuary](https://user-images.githubusercontent.com/36451701/133950594-98e392ac-50b6-4756-b4d9-a8417555d632.png)
+
+### Supervised Learning Model: Predicting Median Listing Price:
+![Supervised Learning 1](https://user-images.githubusercontent.com/81929616/133951866-ea45c9e6-3d3a-45e1-bd78-d02f87e6d129.png)
+
+### Cleaning the Data:
+![Supervised Learning 2](https://user-images.githubusercontent.com/81929616/133951894-8bba2a58-c181-4d90-99a4-6c4b9910149e.png)
+
+### Splitting the Data into Training and Test sets:
+![Supervised Learning 3](https://user-images.githubusercontent.com/81929616/133951913-7e8fd8fc-445c-46ff-bcb1-5ae622f95ddd.png)
+
+### Visualizing the Results:
+![Supervised Learning 4](https://user-images.githubusercontent.com/81929616/133951936-78b25521-d613-4701-bbe8-07313f2c6de9.png)
+
+ 
+<li>The Presentation itself will be in Tableau (not Google Slides) using the Story feature. </li>
+<li>We chose the colors for color blind accessibility using ColorOracle, a program that shows the entire screen form the perspective of the top four color blind handicaps. 
+Below see our color choice of color palette as though they were viewed by a person with Deuternapia color blindness (the most common variety). 
+<img width="859" alt="Screen Shot 2021-09-20 at 10 39 34 AM" src="https://user-images.githubusercontent.com/14239715/134022303-bf3ed133-e73a-4e38-9a2e-eb1fab1086e4.png">
+
+ 
+ 
+<li>The intro will lead us into the discussion of the Machine Learning model of the project. The majority of this discussion is embeded directly in this Github Third Segment Discussion. </li> 
+<li> We will then discuss data joins, data cleaning, use of posgres, Python and SQL.</li> 
+<li> We will then go to the interactive tool itself. </li> 
+The first encarnation of the tool is this interactive Tableau representation:
+This enables users to scrole through Realtor.com's Hotness ranking and discover into which of our machine learning groupings each city falls. 
+<img width="1597" alt="Screen Shot 2021-09-19 at 8 11 45 PM" src="https://user-images.githubusercontent.com/14239715/133947521-670b9f46-fb49-4209-b208-60372d6d983d.png">
+
+Secondly, we'll show the HTML/Javascript version of the tool. 
+We have TWO(!) interative version that is working. First, one working using MapBox: 
+<img width="1023" alt="Screen Shot 2021-09-19 at 7 52 20 PM" src="https://user-images.githubusercontent.com/14239715/133947055-bfff3b38-0848-49bd-955d-4edf87ce5ccb.png">
+ 
+ 
+and also, one that is working using D3, Javascript and HTML:
+ <img width="1065" alt="Screen Shot 2021-09-20 at 8 19 26 PM" src="https://user-images.githubusercontent.com/14239715/134093670-c91b81df-faa2-47f1-8a22-418ea6c77af6.png"
+
+ The iteration for the D3 map is as follows. 
+<img width="1517" alt="Screen Shot 2021-09-19 at 7 10 50 PM" src=<img width="1065" alt="Screen Shot 2021-09-20 at 8 19 26 PM" src="https://user-images.githubusercontent.com/14239715/134093769-04cd17ef-99a2-4ace-8c3e-a75e9a879bfc.png">
+
+ 
+Which looked like this in an earlier iteration: 
+<img width="1379" alt="Screen Shot 2021-09-19 at 8 04 09 PM" src="https://user-images.githubusercontent.com/14239715/133947302-54a0d817-4c08-41e4-af6e-3847949d8596.png">
+
+But will be chosing one to connect to github pages.
+ 
+ 
+We will then show further analysis of the select cities. These cities were JUST UNDER the hotest 'high supply high demand' category segmented by our model. To find the 'next hotest city' we did the following analysis. The user can chose the city by the legend and discover the corresponding city selection. The layout for these analysis' is not finished. 
+
+
+ 
+  
+<li>Finally we will show the additional data analysis in Tableau and discuss the limitation of the study and questions for future discussion.</li>
+</ul>
+<img width="1528" alt="Screen Shot 2021-09-20 at 10 50 11 AM" src="https://user-images.githubusercontent.com/14239715/134093409-d7c94601-bd7e-4529-9ccd-8b8374d7b1f1.png">
+
+
+
+
+
+
 ## Second Segment Rubric
-Hi team! I needed to get this done this morning so I can not worry about Sun night's deadline (just in case our river running today leaves us wanting more). Please edit this however you like to make it correspond with the Rubric setup. I believe Dave is going to build the setup to match what Steve did for the first segement. 
+
+### Database Iteration
+For the base of our project we worked with a dataset from Realtor.com (https://www.kaggle.com/maedemaftouni/real-estate-market-trends?select=RDC_Inventory_Hotness_Metrics_County_History.csv). We cleaned this dataset using Python Pandas to check for duplicates, those indicated to be outliers, and removing columns that are out of scope for the analysis. See Dataset_Exploration_v1.ipynb for additional details. Secondly, we cleaned the Mortgage Rates dataset using a similar process in Python Panda (see Mortgage_Cleaning.ipynb for additional details). Both datasets were manually loaded into pgAdmin for merging with SQL and merged with a left join on the Realtor.com dataset (see SQL_Join_ML_Dataset.txt to review the SQL queries).  This merged dataset serves as the basis for much of the visualization below. 
+
+Our team had also discovered several other datasets that were of interest in our analysis, including information on the cost of living, state and local tax rates and taxes on the median households for both the U.S. and State Households, and happiness index rankings. These datasets were also cleaned via Pandas and loaded in to the SQL Database using a string encoder and tosql Pandas commands (see SQL_String_Encoder.ipynb) and merged the datasets in pgAdmin (see SQL Joins Supplementary.txt)
+
+### Connecting Machine Learning Model 
+*You have the data, what do you hope to get out of it?*
+
+#### Resources:
+- [dataset](https://raw.githubusercontent.com/sjpozzuoli/Daves_Eagles/main/Data_Main/data.csv)
+- [unsupervised_analysis_group_project.ipynb](https://github.com/sjpozzuoli/Daves_Eagles/blob/main/unsupervised_analysis_group_project.ipynb)
+
+#### Software:
+- Python 3.8.5
+- Google Colab
+- RStudio: 3.6.2
+
+#### Step 1: Analyze the input data.
+
+![analyze_input_a](https://user-images.githubusercontent.com/36451701/133001328-1171b0f9-aa1c-4e58-9070-ab112c3881cd.png)
+
+#### Step 2: Analyze the output data.
+
+![analyze_input_b](https://user-images.githubusercontent.com/36451701/133001333-68e5d8a8-047b-487a-89b9-06e503973d00.png)
+
+![analyze_input_c](https://user-images.githubusercontent.com/36451701/133001336-4e841548-7c46-472e-abc1-55c04d01c5e3.png)
+
+![analyze_input_d](https://user-images.githubusercontent.com/36451701/133001337-72167618-7372-4647-b7e0-aa936d7da1dd.png)
+
+#### Step 3: Choose your algorithm - Clustering KMeans
+
+![kmeans_a](https://user-images.githubusercontent.com/36451701/133001547-e4882ca5-9787-452c-9e95-e84e01967ad1.png)
+
+![elbow](https://user-images.githubusercontent.com/36451701/133001549-d7f83f2d-9e5a-423c-aa31-72870c5bf369.png)
+
+![elbow_b](https://user-images.githubusercontent.com/36451701/133333021-03fce2d6-60d4-465b-89e4-e360671ac4ba.png)
+
+![elbow_d](https://user-images.githubusercontent.com/36451701/133479101-fc033efe-7601-4b85-84e6-607b79c56a17.png)
+
+![train](https://user-images.githubusercontent.com/36451701/133001551-cfec94bc-adc4-4e48-bf73-c6fd8ce4f436.png)
+
+#### Step 4: Analyze the results and review accuracy
+
+![clusters_b](https://user-images.githubusercontent.com/36451701/133324106-80c484bf-6f8d-4843-9334-be2eab9b12c2.png)
+
+![clusters_c](https://user-images.githubusercontent.com/36451701/133325865-c7461d0d-5f40-4cd2-9dd9-ad6900d7cb7f.png)
+
+![clusters_d](https://user-images.githubusercontent.com/36451701/133326463-5f6f91d8-efe4-4aa4-bdea-8f40a5a9d104.png)
+
+
+#### Analysis
+- Looking for unexpected things to pop up like structures, clusters and groupings we would have never thought of otherwise. 
+- Simplifying the process of buying a home by pinpointing the most important features.
+- What are the characteristics of the different clusters/groups created by the machine learning model?
+
+![pivot](https://user-images.githubusercontent.com/36451701/133010657-3b50020c-7cd8-4149-88b4-e108614f0bae.png)
+
+![pivot_b](https://user-images.githubusercontent.com/36451701/133354885-c9984b8f-1c69-4978-8a53-33d34641740e.png)
+
+![heatmap](https://user-images.githubusercontent.com/36451701/133001677-78ff3689-cb4a-441e-9c78-9f38a735fc79.png)
+
+![heatmap_b](https://user-images.githubusercontent.com/36451701/133326825-59d89f18-36a2-4a65-b2df-3afb018b817d.png)
+
+![boxplot](https://user-images.githubusercontent.com/36451701/133001735-e5f8223d-7753-43c0-b82f-fecddf9a0410.png)
+
+![demand](https://user-images.githubusercontent.com/36451701/133001761-bc1c9d89-7b52-4775-a658-8869609b081e.png)
+
+![supply](https://user-images.githubusercontent.com/36451701/133001780-5da55a74-f875-4f01-bb6f-7927d82ff7de.png)
+
+![hotness](https://user-images.githubusercontent.com/36451701/133001799-e6db938b-288e-4570-ac44-fc0f8b2a804c.png)
+
 
 ### Visualization Iteration
 
@@ -27,11 +261,7 @@ Finally, the code in progress of a potential Javascript/HTML site for potential 
 <img width="1686" alt="Screen Shot 2021-09-10 at 8 14 53 PM" src="https://user-images.githubusercontent.com/14239715/132949573-676407f2-2da1-4840-b807-5fd747c9e60f.png">
 
 
-
-
-
-
-
+___________________________________________________________________________________________________________________________________________________________________________________
 ## First Segment Rubric
 
 ### A) Presentation
@@ -44,8 +274,6 @@ Finally, the code in progress of a potential Javascript/HTML site for potential 
 - We have begun to source data from multiple places like Zillow and the newly reprted Census data to build a picture of the historical information about these cities. From there we will attempt to determine which factors are most important when implementing the unsupervised machine learning aspect of the project.
 4. Questions we hope to answer with the data
 - We hope to answer the question of which city will see an increase in real estate prices due to an influx of new residents. We will also attempt to determine which cities would be ideal for investing in real estate prior to this rush.
-
-#### In order to communicate for this project, we have used class time, office hours, a slack channel with all members and video chats outside of class time in order to coordinate roles and let others know when data was being uploaded to branches. 
 
 ### B) Github Repository - (Steve)
 Main Branch
