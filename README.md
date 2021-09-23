@@ -2,7 +2,7 @@
 Group 4 Final Project
 
 ## Fourth Segment Deliverable
-Final presentation. Link here: https://github.com/sjpozzuoli/Daves_Eagles/tree/main/Presentation
+Final presentation. Link here: https://github.com/sjpozzuoli/Daves_Eagles/tree/main/Presentation the app is linked below, and Tableau link is here https://github.com/sjpozzuoli/Daves_Eagles/tree/main/Tableau
 
 
 ## Third Segment Rubric
